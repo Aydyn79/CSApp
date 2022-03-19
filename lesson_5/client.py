@@ -20,7 +20,7 @@ def create_presence(account_name='Guest'):
             ACCOUNT_NAME: account_name
         }
     }
-    LOGGER.debug(f'Создано сообщение {out}, пользователь: {account_name}')
+    LOGGER.info(f'Создано сообщение {out}, пользователь: {account_name}')
     return out
 
 
@@ -41,7 +41,7 @@ def getParseArgv():
         parser = argparse.ArgumentParser()
         parser.add_argument('-a', '--addr', nargs='?', default="127.0.0.1",
                             help='Укажите адрес доступный для клиента, по умолчанию будет указан адрес "127.0.0.1"')
-        parser.add_argument('-p', '--port', nargs='?', default='7777',
+        parser.add_argument('-p', '--port', nargs='?', default="7777",
                             help='Укажите номер порта сервера, по умолчанию будет указан порт 7777')
         args = parser.parse_args()
         param_names = [param_name for param_name, _ in vars(args).items()]
@@ -72,7 +72,7 @@ def getParseArgv():
             'После параметра \'a\'- необходимо указать адрес, который будет слушать сервер.')
         sys.exit(1)
     except UnboundLocalError:
-        print(
+        LOGGER.error(
             'Неверный формат IP адреса')
         sys.exit(1)
     return listen_address, listen_port

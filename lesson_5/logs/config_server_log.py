@@ -1,15 +1,16 @@
-"""Кофнфиг серверного логгера"""
+"""Конфиг серверного логгера"""
 
 import sys
 import os
-import logging
 import logging.handlers
+from datetime import time
+
 sys.path.append('../')
 from common.variables import LOGGING_LEVEL
 
 
 # создаём формировщик логов (formatter):
-SERVER_FORMATTER = logging.Formatter('%(asctime)s %(levelname)s %(filename)s %(message)s')
+SERVER_FORMATTER = logging.Formatter('%(asctime)s %(levelname)-8s %(filename)-11s %(message)s', "%d-%m-%Y %H:%M:%S")
 
 # Подготовка имени файла для логирования
 PATH = os.path.dirname(os.path.abspath(__file__))
@@ -19,7 +20,7 @@ PATH = os.path.join(PATH, 'server.log')
 STREAM_HANDLER = logging.StreamHandler(sys.stderr)
 STREAM_HANDLER.setFormatter(SERVER_FORMATTER)
 STREAM_HANDLER.setLevel(logging.ERROR)
-LOG_FILE = logging.handlers.TimedRotatingFileHandler(PATH, encoding='utf8', interval=1, when='D')
+LOG_FILE = logging.handlers.TimedRotatingFileHandler(PATH, when='D', interval=1, encoding='utf8')
 LOG_FILE.setFormatter(SERVER_FORMATTER)
 
 # создаём регистратор и настраиваем его
@@ -34,3 +35,7 @@ if __name__ == '__main__':
     LOGGER.error('Ошибка')
     LOGGER.debug('Отладочная информация')
     LOGGER.info('Информационное сообщение')
+
+    # for i in range(6):
+    #     LOGGER.info(i)
+    #     time.sleep(1)

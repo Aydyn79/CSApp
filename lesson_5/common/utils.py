@@ -7,6 +7,7 @@ import sys
 sys.path.append('../')
 
 from common.variables import MAX_PACKAGE_LENGTH, ENCODING
+from logs.config_client_log import LOGGER
 
 def get_message(client):
     '''

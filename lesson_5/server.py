@@ -6,7 +6,7 @@ import json
 from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, MAX_CONNECTIONS, \
     PRESENCE, TIME, USER, ERROR, DEFAULT_PORT, RESPONDEFAULT_IP_ADDRESSSE
 from common.utils import get_message, send_message
-
+from logs.config_server_log import LOGGER
 
 def process_client_message(message):
     '''
@@ -19,7 +19,9 @@ def process_client_message(message):
     '''
     if ACTION in message and message[ACTION] == PRESENCE and TIME in message \
             and USER in message and message[USER][ACCOUNT_NAME] == 'Guest':
+        LOGGER.info('Сообщение от клиента прошло валидацию')
         return {RESPONSE: 200}
+    LOGGER.error(f'Сообщение от клиента {message} не прошло валидацию')
     return {
         RESPONDEFAULT_IP_ADDRESSSE: 400,
         ERROR: 'Bad Request'
@@ -31,7 +33,6 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-a', '--addr', nargs='?', default="", help='Укажите адрес доступный для клиента, по умолчанию будет указан адрес ""')
     parser.add_argument('-p', '--port', nargs='?', default='7777', help='Укажите номер порта сервера, по умолчанию будет указан порт 7777')
-    # args = parser.parse_args(sys.argv[1:])
     args = parser.parse_args()
     param_names = [param_name for param_name, _ in vars(args).items()]
 
@@ -42,11 +43,12 @@ def main():
         if listen_port < 1024 or listen_port > 65535:
             raise ValueError
     except TypeError:
-        print('После параметра -\'p\' необходимо указать номер порта.')
+        LOGGER.critical(f'После параметра -\'p\' необходимо указать номер порта.')
         sys.exit(1)
     except ValueError:
-        print(
-            'В качастве порта может быть указано только число в диапазоне от 1024 до 65535.')
+        LOGGER.error(
+            f'Попытка запуска сервера с неподходящим номером порта: {listen_port}.'
+            f' Допустимы адреса с 1024 до 65535. Клиент завершается.')
         sys.exit(1)
 
     # Затем загружаем какой адрес слушать
@@ -54,9 +56,10 @@ def main():
     try:
         if 'addr' in param_names:
             listen_address = args.addr
-
+        else:
+            raise IndexError
     except IndexError:
-        print(
+        LOGGER.error(
             'После параметра \'a\'- необходимо указать адрес, который будет слушать сервер.')
         sys.exit(1)
 
@@ -71,14 +74,16 @@ def main():
 
     while True:
         client, client_address = transport.accept()
+        LOGGER.info(f'Установлено соединение с клиентом: {client_address}')
         try:
             message_from_cient = get_message(client)
-            print(message_from_cient)
+            LOGGER.info(f'Получено сообщение от клиента {message_from_cient}')
             response = process_client_message(message_from_cient)
             send_message(client, response)
+            LOGGER.info(f'Отправлен ответ клиенту {response}')
             client.close()
         except (ValueError, json.JSONDecodeError):
-            print('Принято некорретное сообщение от клиента.')
+            LOGGER.error('Принято некорретное сообщение от клиента.')
             client.close()
 
 
