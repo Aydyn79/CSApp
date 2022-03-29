@@ -69,3 +69,191 @@ TypeError
 19-03-2022 22:02:35 ERROR    client.py   В ответе сервера отсутствует необходимое поле response
 24-03-2022 23:30:07 INFO     decor_1.py  Обращение к функции bye, с аргументами 'andry', 'kevin', 'goblin', ODKB='NATO', Russia='Europa', China='West'
 24-03-2022 23:57:21 INFO     decor_1.py  Обращение к функции hi, с аргументами 'freaky bitches'
+28-03-2022 13:33:15 INFO     client_only_listen.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:33:15 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648449195.3241093, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 13:33:15 INFO     client_only_listen.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:33:15 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648449195.5700793, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 13:33:15 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+28-03-2022 13:33:15 INFO     client_only_speak.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:33:15 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648449195.8033369, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 13:33:15 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+28-03-2022 13:33:16 INFO     client_only_speak.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:33:16 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648449196.1148276, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 13:33:16 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:33:16 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:33:37 INFO     client_only_listen.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:33:37 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648449217.882747, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 13:33:38 INFO     client_only_listen.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:33:38 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648449218.1274447, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 13:33:38 ERROR    client_only_listen.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:33:38 INFO     client_only_speak.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:33:38 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648449218.3014476, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 13:33:38 ERROR    client_only_listen.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:33:38 INFO     client_only_speak.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:33:38 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648449218.5635252, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 13:33:38 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:33:39 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:34:13 INFO     client_only_listen.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:34:13 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648449253.2294493, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 13:34:13 INFO     client_only_listen.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:34:13 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648449253.501733, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 13:34:13 ERROR    client_only_listen.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:34:13 INFO     client_only_speak.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:34:13 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648449253.6845522, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 13:34:13 ERROR    client_only_listen.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:34:13 INFO     client_only_speak.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:34:13 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648449253.9405987, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 13:34:13 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:34:14 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:34:28 INFO     client_only_listen.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:34:28 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648449268.1273751, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 13:34:28 INFO     client_only_listen.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:34:28 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648449268.3936698, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 13:34:28 ERROR    client_only_listen.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:34:28 INFO     client_only_speak.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:34:28 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648449268.588164, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 13:34:28 ERROR    client_only_listen.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:34:28 INFO     client_only_speak.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:34:28 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648449268.9138033, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 13:34:28 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:34:29 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 13:35:10 INFO     client_only_speak.py Запущен клиент grom с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 13:35:25 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648449321.7670045, 'user': {'account_name': 'grom'}}, пользователь: grom
+28-03-2022 13:36:13 INFO     client_only_speak.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+28-03-2022 13:36:25 DEBUG    client_only_speak.py Запущены процессы
+28-03-2022 23:17:53 INFO     client_only_listen.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 23:17:53 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648484273.4150307, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 23:17:53 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+28-03-2022 23:18:16 INFO     client_only_listen.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 23:18:16 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648484296.7759435, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 23:18:17 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+28-03-2022 23:18:30 INFO     client_only_speak.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 23:18:30 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648484310.2372668, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 23:18:30 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 23:21:03 INFO     client_only_speak.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 23:21:03 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648484463.7219298, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 23:21:04 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 23:25:50 INFO     client_only_listen.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 23:25:50 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648484750.346466, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 23:25:50 ERROR    client_only_listen.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 23:47:16 INFO     client_only_listen.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 23:47:16 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648486036.335623, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 23:47:16 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+28-03-2022 23:47:19 INFO     client_only_listen.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 23:47:19 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648486039.571375, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 23:47:20 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+28-03-2022 23:47:22 INFO     client_only_speak.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 23:47:22 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648486042.7472231, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 23:47:23 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 23:47:25 INFO     client_only_speak.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 23:47:25 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648486045.9666903, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 23:47:26 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 23:47:52 INFO     client_only_listen.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 23:47:52 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648486072.078443, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 23:47:52 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+28-03-2022 23:47:57 INFO     client_only_listen.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 23:47:57 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648486077.3195188, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 23:47:57 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+28-03-2022 23:48:02 INFO     client_only_speak.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 23:48:02 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648486082.5409884, 'user': {'account_name': 'test1'}}, пользователь: test1
+28-03-2022 23:48:03 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+28-03-2022 23:48:07 INFO     client_only_speak.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+28-03-2022 23:48:07 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648486087.743329, 'user': {'account_name': 'test2'}}, пользователь: test2
+28-03-2022 23:48:08 ERROR    client_only_speak.py При установке соединения сервер вернул ошибку: 400 : Имя пользователя уже занято.
+29-03-2022 00:04:37 INFO     client_only_listen.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 00:04:37 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648487077.1226437, 'user': {'account_name': 'test1'}}, пользователь: test1
+29-03-2022 00:04:37 INFO     client_only_listen.py Запущен клиент test2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 00:04:37 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648487077.4093316, 'user': {'account_name': 'test2'}}, пользователь: test2
+29-03-2022 00:04:37 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 00:04:37 INFO     client_only_speak.py Запущен клиент test5 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 00:04:37 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648487077.6771002, 'user': {'account_name': 'test5'}}, пользователь: test5
+29-03-2022 00:04:37 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 00:04:37 INFO     client_only_speak.py Запущен клиент test6 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 00:04:37 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648487077.8201857, 'user': {'account_name': 'test6'}}, пользователь: test6
+29-03-2022 00:04:37 INFO     client_only_speak.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 00:04:37 DEBUG    client_only_speak.py Запущены процессы
+29-03-2022 00:04:38 INFO     client_only_speak.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 00:04:38 DEBUG    client_only_speak.py Запущены процессы
+29-03-2022 00:05:37 DEBUG    client_only_speak.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test6', 'to': 'test1', 'time': 1648487137.4925995, 'mess_text': 'привет Анджей'}
+29-03-2022 00:05:37 INFO     client_only_speak.py Отправлено сообщение для пользователя test1
+29-03-2022 00:05:37 INFO     client_only_listen.py Получено сообщение от пользователя test6:
+привет Анджей
+29-03-2022 00:06:41 DEBUG    client_only_speak.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test6', 'to': 'привет привет', 'time': 1648487201.243655, 'mess_text': 'test2'}
+29-03-2022 00:06:41 INFO     client_only_speak.py Отправлено сообщение для пользователя привет привет
+29-03-2022 00:08:42 DEBUG    client_only_speak.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test6', 'to': 'test2', 'time': 1648487322.8929472, 'mess_text': 'привет укроп'}
+29-03-2022 00:08:42 INFO     client_only_speak.py Отправлено сообщение для пользователя test2
+29-03-2022 00:08:43 INFO     client_only_listen.py Получено сообщение от пользователя test6:
+привет укроп
+29-03-2022 00:09:34 INFO     client_only_speak.py Завершение работы по команде пользователя.
+29-03-2022 00:09:43 CRITICAL client_only_listen.py Потеряно соединение с сервером.
+29-03-2022 20:19:15 INFO     client_only_speak.py Запущен клиент test1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 20:19:15 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648559955.032894, 'user': {'account_name': 'test1'}}, пользователь: test1
+29-03-2022 20:20:00 INFO     client_only_listen.py Запущен клиент test5 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 20:20:00 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648560000.2196631, 'user': {'account_name': 'test5'}}, пользователь: test5
+29-03-2022 22:18:09 INFO     client_only_speak.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 22:18:20 DEBUG    client_only_speak.py Запущены процессы
+29-03-2022 22:19:02 DEBUG    client_only_speak.py Сформирован словарь сообщения: {'action': 'message', 'from': 'test1', 'to': 'fjgfjhgkjhyyi', 'time': 1648567142.8398283, 'mess_text': 'ffjfjfhg'}
+29-03-2022 22:19:02 INFO     client_only_speak.py Отправлено сообщение для пользователя fjgfjhgkjhyyi
+29-03-2022 22:29:06 INFO     client_only_listen.py Запущен клиент recipient1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 22:29:06 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648567746.325625, 'user': {'account_name': 'recipient1'}}, пользователь: recipient1
+29-03-2022 22:29:06 INFO     client_only_listen.py Запущен клиент recipient2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 22:29:06 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648567746.599992, 'user': {'account_name': 'recipient2'}}, пользователь: recipient2
+29-03-2022 22:29:06 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 22:29:06 INFO     client_only_speak.py Запущен клиент sender1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 22:29:06 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648567746.799911, 'user': {'account_name': 'sender1'}}, пользователь: sender1
+29-03-2022 22:29:06 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 22:29:07 INFO     client_only_speak.py Запущен клиент sender2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 22:29:07 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648567747.0688453, 'user': {'account_name': 'sender2'}}, пользователь: sender2
+29-03-2022 22:29:07 INFO     client_only_speak.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 22:29:07 DEBUG    client_only_speak.py Запущены процессы
+29-03-2022 22:29:07 INFO     client_only_speak.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 22:29:07 DEBUG    client_only_speak.py Запущены процессы
+29-03-2022 22:30:02 DEBUG    client_only_speak.py Сформирован словарь сообщения: {'action': 'message', 'from': 'sender2', 'to': 'recipient1', 'time': 1648567802.2451272, 'mess_text': 'hjjfhgdhry'}
+29-03-2022 22:30:02 INFO     client_only_speak.py Отправлено сообщение для пользователя recipient1
+29-03-2022 22:30:02 INFO     client_only_listen.py Получено сообщение от пользователя sender2:
+hjjfhgdhry
+29-03-2022 22:30:02 ERROR    client_only_listen.py Получено некорректное сообщение с сервера: {'action': 'message', 'from': 'sender2', 'to': 'recipient1', 'time': 1648567802.2451272, 'mess_text': 'hjjfhgdhry'}
+29-03-2022 22:36:24 INFO     client_only_speak.py Завершение работы по команде пользователя.
+29-03-2022 22:37:05 DEBUG    client_only_speak.py Сформирован словарь сообщения: {'action': 'message', 'from': 'sender2', 'to': 'recipient2', 'time': 1648568225.0612307, 'mess_text': 'kgjhgtrreyrryd'}
+29-03-2022 22:37:05 INFO     client_only_speak.py Отправлено сообщение для пользователя recipient2
+29-03-2022 22:37:05 INFO     client_only_listen.py Получено сообщение от пользователя sender2:
+kgjhgtrreyrryd
+29-03-2022 22:37:05 ERROR    client_only_listen.py Получено некорректное сообщение с сервера: {'action': 'message', 'from': 'sender2', 'to': 'recipient2', 'time': 1648568225.0612307, 'mess_text': 'kgjhgtrreyrryd'}
+29-03-2022 22:38:11 DEBUG    client_only_speak.py Сформирован словарь сообщения: {'action': 'message', 'from': 'sender2', 'to': 'recipient1', 'time': 1648568291.0626612, 'mess_text': 'приветег'}
+29-03-2022 22:38:11 INFO     client_only_speak.py Отправлено сообщение для пользователя recipient1
+29-03-2022 22:38:11 INFO     client_only_listen.py Получено сообщение от пользователя sender2:
+приветег
+29-03-2022 22:38:11 ERROR    client_only_listen.py Получено некорректное сообщение с сервера: {'action': 'message', 'from': 'sender2', 'to': 'recipient1', 'time': 1648568291.0626612, 'mess_text': 'приветег'}
+29-03-2022 22:41:08 INFO     client_only_listen.py Запущен клиент recipient1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 22:41:08 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648568468.1630027, 'user': {'account_name': 'recipient1'}}, пользователь: recipient1
+29-03-2022 22:41:08 INFO     client_only_listen.py Запущен клиент recipient2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 22:41:08 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648568468.4363031, 'user': {'account_name': 'recipient2'}}, пользователь: recipient2
+29-03-2022 22:41:08 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 22:41:08 INFO     client_only_listen.py Запущен клиент recipient3 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 22:41:08 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648568468.6389809, 'user': {'account_name': 'recipient3'}}, пользователь: recipient3
+29-03-2022 22:41:08 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 22:41:08 INFO     client_only_listen.py Запущен клиент recipient4 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 22:41:08 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648568468.852765, 'user': {'account_name': 'recipient4'}}, пользователь: recipient4
+29-03-2022 22:41:08 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 22:41:09 INFO     client_only_listen.py Запущен клиент recipient5 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 22:41:09 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648568469.077105, 'user': {'account_name': 'recipient5'}}, пользователь: recipient5
+29-03-2022 22:41:09 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 22:41:09 INFO     client_only_speak.py Запущен клиент sender1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+29-03-2022 22:41:09 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648568469.236973, 'user': {'account_name': 'sender1'}}, пользователь: sender1
+29-03-2022 22:41:09 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 22:41:09 INFO     client_only_speak.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+29-03-2022 22:41:09 DEBUG    client_only_speak.py Запущены процессы
+29-03-2022 22:42:05 DEBUG    client_only_speak.py Сформирован словарь сообщения: {'action': 'message', 'from': 'sender1', 'to': 'recipient1', 'time': 1648568525.9971597, 'mess_text': 'Привет всем слышащим'}
+29-03-2022 22:42:05 INFO     client_only_speak.py Отправлено сообщение для пользователя recipient1
+29-03-2022 22:42:06 INFO     client_only_listen.py Получено сообщение от пользователя sender1:
+Привет всем слышащим
+29-03-2022 22:42:06 INFO     client_only_listen.py Получено сообщение от пользователя sender1:
+Привет всем слышащим
+29-03-2022 22:42:06 INFO     client_only_listen.py Получено сообщение от пользователя sender1:
+Привет всем слышащим
+29-03-2022 22:42:06 INFO     client_only_listen.py Получено сообщение от пользователя sender1:
+Привет всем слышащим
+29-03-2022 22:42:06 INFO     client_only_listen.py Получено сообщение от пользователя sender1:
+Привет всем слышащим
+29-03-2022 22:42:27 CRITICAL client_only_listen.py Потеряно соединение с сервером.
+29-03-2022 22:42:27 CRITICAL client_only_listen.py Потеряно соединение с сервером.

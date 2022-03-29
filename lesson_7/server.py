@@ -147,6 +147,7 @@ def main():
                 try:
                     process_client_message(get_message(client_with_message),
                                            messages, client_with_message, clients, names)
+                    # _,address = client_with_message.recvfrom(1024)
                 except Exception:
                     LOGGER.info(f'Клиент {client_with_message.getpeername()} '
                                 f'отключился от сервера.')
@@ -155,7 +156,11 @@ def main():
             # Если есть сообщения, обрабатываем каждое.
         for i in messages:
             try:
-                process_message(i, names, send_data_lst)
+            # ВОТ ЗДЕСЬ ВНЁС ИЗМЕНЕНИЯ \/\/\/
+                # process_message(i, names, send_data_lst)
+                for cli in clients:
+                    send_message(cli,i)
+            # ВОТ ЗДЕСЬ ВНЁС ИЗМЕНЕНИЯ /\/\/\
             except Exception:
                 LOGGER.info(f'Связь с клиентом с именем {i[DESTINATION]} была потеряна')
                 clients.remove(names[i[DESTINATION]])
