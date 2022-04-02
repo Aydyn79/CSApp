@@ -257,3 +257,39 @@ kgjhgtrreyrryd
 Привет всем слышащим
 29-03-2022 22:42:27 CRITICAL client_only_listen.py Потеряно соединение с сервером.
 29-03-2022 22:42:27 CRITICAL client_only_listen.py Потеряно соединение с сервером.
+01-04-2022 21:42:15 INFO     client_only_listen.py Запущен клиент recipient1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+01-04-2022 21:42:15 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648824135.6809163, 'user': {'account_name': 'recipient1'}}, пользователь: recipient1
+01-04-2022 21:42:15 INFO     client_only_listen.py Запущен клиент recipient2 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+01-04-2022 21:42:15 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648824135.9727695, 'user': {'account_name': 'recipient2'}}, пользователь: recipient2
+01-04-2022 21:42:15 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+01-04-2022 21:42:16 INFO     client_only_listen.py Запущен клиент recipient3 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+01-04-2022 21:42:16 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648824136.2486403, 'user': {'account_name': 'recipient3'}}, пользователь: recipient3
+01-04-2022 21:42:16 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+01-04-2022 21:42:16 INFO     client_only_listen.py Запущен клиент recipient4 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+01-04-2022 21:42:16 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648824136.463718, 'user': {'account_name': 'recipient4'}}, пользователь: recipient4
+01-04-2022 21:42:16 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+01-04-2022 21:42:16 INFO     client_only_listen.py Запущен клиент recipient5 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+01-04-2022 21:42:16 INFO     client_only_listen.py Создано сообщение {'action': 'presence', 'time': 1648824136.6734362, 'user': {'account_name': 'recipient5'}}, пользователь: recipient5
+01-04-2022 21:42:16 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+01-04-2022 21:42:16 INFO     client_only_speak.py Запущен клиент sender1 с парамертами: адрес сервера: 127.0.0.1, порт: 7777
+01-04-2022 21:42:16 INFO     client_only_speak.py Создано сообщение {'action': 'presence', 'time': 1648824136.8705978, 'user': {'account_name': 'sender1'}}, пользователь: sender1
+01-04-2022 21:42:16 INFO     client_only_listen.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+01-04-2022 21:42:17 INFO     client_only_speak.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+01-04-2022 21:42:17 DEBUG    client_only_speak.py Запущены процессы
+01-04-2022 21:43:24 DEBUG    client_only_speak.py Сформирован словарь сообщения: {'action': 'message', 'from': 'sender1', 'to': 'recipient5', 'time': 1648824204.5477126, 'mess_text': 'gfjgfj'}
+01-04-2022 21:43:24 INFO     client_only_speak.py Отправлено сообщение для пользователя recipient5
+01-04-2022 21:43:24 INFO     client_only_listen.py Получено сообщение от пользователя sender1:
+gfjgfj
+01-04-2022 21:43:24 INFO     client_only_listen.py Получено сообщение от пользователя sender1:
+gfjgfj
+01-04-2022 21:43:24 INFO     client_only_listen.py Получено сообщение от пользователя sender1:
+gfjgfj
+01-04-2022 21:43:24 INFO     client_only_listen.py Получено сообщение от пользователя sender1:
+gfjgfj
+01-04-2022 21:43:24 INFO     client_only_listen.py Получено сообщение от пользователя sender1:
+gfjgfj
+01-04-2022 21:43:29 CRITICAL client_only_listen.py Потеряно соединение с сервером.
+01-04-2022 21:43:29 CRITICAL client_only_listen.py Потеряно соединение с сервером.
+01-04-2022 21:43:29 CRITICAL client_only_listen.py Потеряно соединение с сервером.
+01-04-2022 21:43:29 CRITICAL client_only_listen.py Потеряно соединение с сервером.
+01-04-2022 21:43:29 CRITICAL client_only_listen.py Потеряно соединение с сервером.

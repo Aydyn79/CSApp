@@ -218,3 +218,39 @@
 29-03-2022 22:42:27 Вызов message_from_server из модуля: decor_2.py.
 29-03-2022 22:42:27  - Функция message_from_server вызвана из функции run
 29-03-2022 22:42:27 Вызов message_from_server из модуля: decor_2.py.
+01-04-2022 21:42:15  - Функция create_presence вызвана из функции main
+01-04-2022 21:42:15 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 21:42:15  - Функция process_ans вызвана из функции main
+01-04-2022 21:42:15 Вызов process_ans из модуля: decor_2.py.
+01-04-2022 21:42:15  - Функция create_presence вызвана из функции main
+01-04-2022 21:42:15 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 21:42:16  - Функция process_ans вызвана из функции main
+01-04-2022 21:42:16 Вызов process_ans из модуля: decor_2.py.
+01-04-2022 21:42:16  - Функция create_presence вызвана из функции main
+01-04-2022 21:42:16 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 21:42:16  - Функция process_ans вызвана из функции main
+01-04-2022 21:42:16 Вызов process_ans из модуля: decor_2.py.
+01-04-2022 21:42:16  - Функция create_presence вызвана из функции main
+01-04-2022 21:42:16 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 21:42:16  - Функция process_ans вызвана из функции main
+01-04-2022 21:42:16 Вызов process_ans из модуля: decor_2.py.
+01-04-2022 21:42:16  - Функция create_presence вызвана из функции main
+01-04-2022 21:42:16 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 21:42:16  - Функция process_ans вызвана из функции main
+01-04-2022 21:42:16 Вызов process_ans из модуля: decor_2.py.
+01-04-2022 21:42:16  - Функция create_presence вызвана из функции main
+01-04-2022 21:42:16 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 21:42:17  - Функция process_ans вызвана из функции main
+01-04-2022 21:42:17 Вызов process_ans из модуля: decor_2.py.
+01-04-2022 21:43:24  - Функция create_message вызвана из функции user_interactive
+01-04-2022 21:43:24 Вызов create_message из модуля: decor_2.py.
+01-04-2022 21:43:29  - Функция message_from_server вызвана из функции run
+01-04-2022 21:43:29  - Функция message_from_server вызвана из функции run
+01-04-2022 21:43:29  - Функция message_from_server вызвана из функции run
+01-04-2022 21:43:29  - Функция message_from_server вызвана из функции run
+01-04-2022 21:43:29 Вызов message_from_server из модуля: decor_2.py.
+01-04-2022 21:43:29  - Функция message_from_server вызвана из функции run
+01-04-2022 21:43:29 Вызов message_from_server из модуля: decor_2.py.
+01-04-2022 21:43:29 Вызов message_from_server из модуля: decor_2.py.
+01-04-2022 21:43:29 Вызов message_from_server из модуля: decor_2.py.
+01-04-2022 21:43:29 Вызов message_from_server из модуля: decor_2.py.
