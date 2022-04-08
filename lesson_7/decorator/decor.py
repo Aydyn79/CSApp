@@ -14,7 +14,7 @@ def logged(cls=None,*, name=""):
 
             # Подготовка имени файла для логирования
             PATH = os.path.dirname(os.path.abspath(__file__))
-            PATH = os.path.join(PATH, 'client.log')
+            PATH = os.path.join(PATH, 'client_s.log')
 
             # создаём потоки вывода логов
             STREAM_HANDLER = logging.StreamHandler(sys.stderr)
