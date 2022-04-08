@@ -1,0 +1,747 @@
+24-03-2022 00:49:20  - Функция hello вызвана из функции ex
+24-03-2022 00:49:20 Альтернативное определение вызывающей функции №1: ex
+24-03-2022 00:49:20 Альтернативное определение вызывающей функции №2: ex('andry').
+24-03-2022 00:49:20 Вызов hello из модуля [FrameInfo(frame=<frame at 0x7fc6e4a73be0, file '/home/nexter/PycharmProjects/CSApp/lesson_6/decor_2.py', line 19, code wrapper>, filename='/home/nexter/PycharmProjects/CSApp/lesson_6/decor_2.py', lineno=19, function='wrapper', code_context=["        LOGGER.info(f'Вызов {name_f} из модуля {inspect.stack()}.')\n"], index=0), FrameInfo(frame=<frame at 0x1258f10, file '/home/nexter/PycharmProjects/CSApp/lesson_6/decor_2.py', line 34, code ex>, filename='/home/nexter/PycharmProjects/CSApp/lesson_6/decor_2.py', lineno=34, function='ex', code_context=['    hello(name)\n'], index=0), FrameInfo(frame=<frame at 0x11b9540, file '/home/nexter/PycharmProjects/CSApp/lesson_6/decor_2.py', line 37, code <module>>, filename='/home/nexter/PycharmProjects/CSApp/lesson_6/decor_2.py', lineno=37, function='<module>', code_context=["ex('andry')\n"], index=0)].
+24-03-2022 00:49:20 Альтернативное определение вызывающего модуля (Для тех кто не ищет легких путей):decor_2.py
+24-03-2022 00:50:47  - Функция hello вызвана из функции ex
+24-03-2022 00:50:47 Альтернативное определение вызывающей функции №1: ex
+24-03-2022 00:50:47 Альтернативное определение вызывающей функции №2: ex('andry').
+24-03-2022 00:50:47 Вызов hello из модуля /home/nexter/PycharmProjects/CSApp/lesson_6/decor_2.py.
+24-03-2022 00:50:47 Альтернативное определение вызывающего модуля (Для тех кто не ищет легких путей):decor_2.py
+24-03-2022 00:51:21  - Функция hello вызвана из функции ex
+24-03-2022 00:51:21 Альтернативное определение вызывающей функции №1: ex
+24-03-2022 00:51:21 Альтернативное определение вызывающей функции №2: ex('andry').
+24-03-2022 00:51:21 Вызов hello из модуля decor_2.py.
+24-03-2022 00:51:21 Альтернативное определение вызывающего модуля (Для тех кто не ищет легких путей):decor_2.py
+24-03-2022 00:52:22  - Функция hello вызвана из функции ex
+24-03-2022 00:52:22 Альтернативное определение вызывающей функции №1: ex
+24-03-2022 00:52:22 Альтернативное определение вызывающей функции №2: ex('andry').
+24-03-2022 00:52:22 Вызов hello из модуля: decor_2.py.
+24-03-2022 00:52:22 Альтернативное определение вызывающего модуля (Для тех кто не ищет легких путей):decor_2.py
+24-03-2022 01:02:15  - Функция hello вызвана из функции ex
+24-03-2022 01:02:15 Альтернативное определение вызывающей функции №1: ex
+24-03-2022 01:02:15 Альтернативное определение вызывающей функции №2: ex('andry').
+24-03-2022 01:02:15 Вызов hello из модуля: decor_2.py.
+24-03-2022 01:02:15 Альтернативное определение вызывающего модуля (Для тех кто не ищет легких путей):decor_2.py
+24-03-2022 01:02:22  - Функция hello вызвана из функции ex
+24-03-2022 01:02:22 Альтернативное определение вызывающей функции №1: ex
+24-03-2022 01:02:22 Альтернативное определение вызывающей функции №2: ex('andry').
+24-03-2022 01:02:22 Вызов hello из модуля: decor_2.py.
+24-03-2022 01:02:22 Альтернативное определение вызывающего модуля (Для тех кто не ищет легких путей):decor_2.py
+24-03-2022 01:03:58  - Функция hello вызвана из функции ex
+24-03-2022 01:03:58 Альтернативное определение вызывающей функции №1: ex
+24-03-2022 01:03:58 Альтернативное определение вызывающей функции №2: ex('andry').
+24-03-2022 01:03:58 Вызов hello из модуля: decor_2.py.
+24-03-2022 01:03:58 Альтернативное определение вызывающего модуля (Для тех кто не ищет легких путей):decor_2.py
+24-03-2022 01:04:09  - Функция hello вызвана из функции ex
+24-03-2022 01:04:09 Альтернативное определение вызывающей функции №1: ex
+24-03-2022 01:04:09 Альтернативное определение вызывающей функции №2: ex('andry').
+24-03-2022 01:04:09 Вызов hello из модуля: decor_2.py.
+24-03-2022 01:04:09 Альтернативное определение вызывающего модуля (Для тех кто не ищет легких путей):decor_2.py
+24-03-2022 01:05:35  - Функция hello вызвана из функции ex
+24-03-2022 01:05:35 Альтернативное определение вызывающей функции №1: ex
+24-03-2022 01:05:35 Альтернативное определение вызывающей функции №2: ex('andry').
+24-03-2022 01:05:35 Вызов hello из модуля: decor_2.py.
+24-03-2022 01:05:35 Альтернативное определение вызывающего модуля (Для тех кто не ищет легких путей):decor_2.py
+24-03-2022 22:41:50  - Функция hello вызвана из функции ex
+24-03-2022 22:41:50 Альтернативное определение вызывающей функции №1: ex
+24-03-2022 22:41:50 Альтернативное определение вызывающей функции №2: ex('andry').
+24-03-2022 22:41:50 Вызов hello из модуля: decor_2.py.
+24-03-2022 22:41:50 Альтернативное определение вызывающего модуля (Для тех кто не ищет легких путей):decor_2.py
+28-03-2022 13:33:15  - Функция create_presence вызвана из функции main
+28-03-2022 13:33:15 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:33:15  - Функция process_ans вызвана из функции main
+28-03-2022 13:33:15 Вызов process_ans из модуля: decor_2.py.
+28-03-2022 13:33:15  - Функция create_presence вызвана из функции main
+28-03-2022 13:33:15 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:33:15  - Функция process_ans вызвана из функции main
+28-03-2022 13:33:15 Вызов process_ans из модуля: decor_2.py.
+28-03-2022 13:33:15  - Функция create_presence вызвана из функции main
+28-03-2022 13:33:15 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:33:16  - Функция create_presence вызвана из функции main
+28-03-2022 13:33:16 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:33:37  - Функция create_presence вызвана из функции main
+28-03-2022 13:33:37 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:33:38  - Функция create_presence вызвана из функции main
+28-03-2022 13:33:38 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:33:38  - Функция create_presence вызвана из функции main
+28-03-2022 13:33:38 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:33:38  - Функция create_presence вызвана из функции main
+28-03-2022 13:33:38 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:34:13  - Функция create_presence вызвана из функции main
+28-03-2022 13:34:13 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:34:13  - Функция create_presence вызвана из функции main
+28-03-2022 13:34:13 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:34:13  - Функция create_presence вызвана из функции main
+28-03-2022 13:34:13 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:34:13  - Функция create_presence вызвана из функции main
+28-03-2022 13:34:13 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:34:28  - Функция create_presence вызвана из функции main
+28-03-2022 13:34:28 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:34:28  - Функция create_presence вызвана из функции main
+28-03-2022 13:34:28 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:34:28  - Функция create_presence вызвана из функции main
+28-03-2022 13:34:28 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:34:28  - Функция create_presence вызвана из функции main
+28-03-2022 13:34:28 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:35:30  - Функция create_presence вызвана из функции main
+28-03-2022 13:35:31 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 13:36:08  - Функция process_ans вызвана из функции main
+28-03-2022 13:36:09 Вызов process_ans из модуля: decor_2.py.
+28-03-2022 23:17:53  - Функция create_presence вызвана из функции main
+28-03-2022 23:17:53 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 23:17:53  - Функция process_ans вызвана из функции main
+28-03-2022 23:17:53 Вызов process_ans из модуля: decor_2.py.
+28-03-2022 23:18:16  - Функция create_presence вызвана из функции main
+28-03-2022 23:18:16 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 23:18:17  - Функция process_ans вызвана из функции main
+28-03-2022 23:18:17 Вызов process_ans из модуля: decor_2.py.
+28-03-2022 23:18:30  - Функция create_presence вызвана из функции main
+28-03-2022 23:18:30 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 23:21:03  - Функция create_presence вызвана из функции main
+28-03-2022 23:21:03 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 23:25:50  - Функция create_presence вызвана из функции main
+28-03-2022 23:25:50 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 23:47:16  - Функция create_presence вызвана из функции main
+28-03-2022 23:47:16 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 23:47:16  - Функция process_ans вызвана из функции main
+28-03-2022 23:47:16 Вызов process_ans из модуля: decor_2.py.
+28-03-2022 23:47:19  - Функция create_presence вызвана из функции main
+28-03-2022 23:47:19 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 23:47:20  - Функция process_ans вызвана из функции main
+28-03-2022 23:47:20 Вызов process_ans из модуля: decor_2.py.
+28-03-2022 23:47:22  - Функция create_presence вызвана из функции main
+28-03-2022 23:47:22 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 23:47:25  - Функция create_presence вызвана из функции main
+28-03-2022 23:47:25 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 23:47:52  - Функция create_presence вызвана из функции main
+28-03-2022 23:47:52 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 23:47:52  - Функция process_ans вызвана из функции main
+28-03-2022 23:47:52 Вызов process_ans из модуля: decor_2.py.
+28-03-2022 23:47:57  - Функция create_presence вызвана из функции main
+28-03-2022 23:47:57 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 23:47:57  - Функция process_ans вызвана из функции main
+28-03-2022 23:47:57 Вызов process_ans из модуля: decor_2.py.
+28-03-2022 23:48:02  - Функция create_presence вызвана из функции main
+28-03-2022 23:48:02 Вызов create_presence из модуля: decor_2.py.
+28-03-2022 23:48:07  - Функция create_presence вызвана из функции main
+28-03-2022 23:48:07 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 00:04:37  - Функция create_presence вызвана из функции main
+29-03-2022 00:04:37 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 00:04:37  - Функция create_presence вызвана из функции main
+29-03-2022 00:04:37 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 00:04:37  - Функция process_ans вызвана из функции main
+29-03-2022 00:04:37 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 00:04:37  - Функция process_ans вызвана из функции main
+29-03-2022 00:04:37 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 00:04:37  - Функция create_presence вызвана из функции main
+29-03-2022 00:04:37 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 00:04:37  - Функция process_ans вызвана из функции main
+29-03-2022 00:04:37 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 00:04:37  - Функция create_presence вызвана из функции main
+29-03-2022 00:04:37 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 00:04:38  - Функция process_ans вызвана из функции main
+29-03-2022 00:04:38 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 00:05:37  - Функция create_message вызвана из функции user_interactive
+29-03-2022 00:05:37 Вызов create_message из модуля: decor_2.py.
+29-03-2022 00:06:41  - Функция create_message вызвана из функции user_interactive
+29-03-2022 00:06:41 Вызов create_message из модуля: decor_2.py.
+29-03-2022 00:08:42  - Функция create_message вызвана из функции user_interactive
+29-03-2022 00:08:42 Вызов create_message из модуля: decor_2.py.
+29-03-2022 00:09:34  - Функция create_exit_message вызвана из функции user_interactive
+29-03-2022 00:09:34 Вызов create_exit_message из модуля: decor_2.py.
+29-03-2022 00:09:34  - Функция user_interactive вызвана из функции run
+29-03-2022 00:09:34 Вызов user_interactive из модуля: decor_2.py.
+29-03-2022 00:09:43  - Функция message_from_server вызвана из функции run
+29-03-2022 00:09:43 Вызов message_from_server из модуля: decor_2.py.
+29-03-2022 20:19:15  - Функция create_presence вызвана из функции main
+29-03-2022 20:19:15 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 20:20:00  - Функция create_presence вызвана из функции main
+29-03-2022 20:20:00 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 22:18:06  - Функция process_ans вызвана из функции main
+29-03-2022 22:18:07 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 22:19:02  - Функция create_message вызвана из функции user_interactive
+29-03-2022 22:19:02 Вызов create_message из модуля: decor_2.py.
+29-03-2022 22:29:06  - Функция create_presence вызвана из функции main
+29-03-2022 22:29:06 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 22:29:06  - Функция process_ans вызвана из функции main
+29-03-2022 22:29:06 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 22:29:06  - Функция create_presence вызвана из функции main
+29-03-2022 22:29:06 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 22:29:06  - Функция process_ans вызвана из функции main
+29-03-2022 22:29:06 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 22:29:06  - Функция create_presence вызвана из функции main
+29-03-2022 22:29:06 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 22:29:07  - Функция process_ans вызвана из функции main
+29-03-2022 22:29:07 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 22:29:07  - Функция create_presence вызвана из функции main
+29-03-2022 22:29:07 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 22:29:07  - Функция process_ans вызвана из функции main
+29-03-2022 22:29:07 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 22:30:02  - Функция create_message вызвана из функции user_interactive
+29-03-2022 22:30:02 Вызов create_message из модуля: decor_2.py.
+29-03-2022 22:36:24  - Функция create_exit_message вызвана из функции user_interactive
+29-03-2022 22:36:24 Вызов create_exit_message из модуля: decor_2.py.
+29-03-2022 22:36:24  - Функция user_interactive вызвана из функции run
+29-03-2022 22:36:24 Вызов user_interactive из модуля: decor_2.py.
+29-03-2022 22:37:05  - Функция create_message вызвана из функции user_interactive
+29-03-2022 22:37:05 Вызов create_message из модуля: decor_2.py.
+29-03-2022 22:38:11  - Функция create_message вызвана из функции user_interactive
+29-03-2022 22:38:11 Вызов create_message из модуля: decor_2.py.
+29-03-2022 22:41:08  - Функция create_presence вызвана из функции main
+29-03-2022 22:41:08 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 22:41:08  - Функция process_ans вызвана из функции main
+29-03-2022 22:41:08 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 22:41:08  - Функция create_presence вызвана из функции main
+29-03-2022 22:41:08 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 22:41:08  - Функция process_ans вызвана из функции main
+29-03-2022 22:41:08 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 22:41:08  - Функция create_presence вызвана из функции main
+29-03-2022 22:41:08 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 22:41:08  - Функция process_ans вызвана из функции main
+29-03-2022 22:41:08 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 22:41:08  - Функция create_presence вызвана из функции main
+29-03-2022 22:41:08 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 22:41:09  - Функция process_ans вызвана из функции main
+29-03-2022 22:41:09 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 22:41:09  - Функция create_presence вызвана из функции main
+29-03-2022 22:41:09 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 22:41:09  - Функция process_ans вызвана из функции main
+29-03-2022 22:41:09 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 22:41:09  - Функция create_presence вызвана из функции main
+29-03-2022 22:41:09 Вызов create_presence из модуля: decor_2.py.
+29-03-2022 22:41:09  - Функция process_ans вызвана из функции main
+29-03-2022 22:41:09 Вызов process_ans из модуля: decor_2.py.
+29-03-2022 22:42:05  - Функция create_message вызвана из функции user_interactive
+29-03-2022 22:42:05 Вызов create_message из модуля: decor_2.py.
+29-03-2022 22:42:27  - Функция message_from_server вызвана из функции run
+29-03-2022 22:42:27 Вызов message_from_server из модуля: decor_2.py.
+29-03-2022 22:42:27  - Функция message_from_server вызвана из функции run
+29-03-2022 22:42:27 Вызов message_from_server из модуля: decor_2.py.
+01-04-2022 21:45:28  - Функция create_presence вызвана из функции main
+01-04-2022 21:45:28 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 21:45:28  - Функция create_presence вызвана из функции main
+01-04-2022 21:45:28 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 21:45:29  - Функция create_presence вызвана из функции main
+01-04-2022 21:45:29 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 21:45:29  - Функция create_presence вызвана из функции main
+01-04-2022 21:45:29 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 21:45:29  - Функция create_presence вызвана из функции main
+01-04-2022 21:45:29 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 22:05:38  - Функция create_presence вызвана из функции main
+01-04-2022 22:05:38 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 22:05:39  - Функция create_presence вызвана из функции main
+01-04-2022 22:05:39 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 22:05:39  - Функция create_presence вызвана из функции main
+01-04-2022 22:05:39 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 22:05:39  - Функция create_presence вызвана из функции main
+01-04-2022 22:05:39 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 22:05:39  - Функция create_presence вызвана из функции main
+01-04-2022 22:05:39 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 22:08:26  - Функция create_presence вызвана из функции main
+01-04-2022 22:08:26 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 22:08:26  - Функция create_presence вызвана из функции main
+01-04-2022 22:08:26 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 22:12:11  - Функция create_presence вызвана из функции main
+01-04-2022 22:12:11 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 22:12:38  - Функция create_presence вызвана из функции main
+01-04-2022 22:12:38 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 22:17:13  - Функция create_presence вызвана из функции main
+01-04-2022 22:17:13 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 22:17:23  - Функция create_presence вызвана из функции main
+01-04-2022 22:17:23 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 22:25:54  - Функция create_presence вызвана из функции main
+01-04-2022 22:25:55 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 22:43:12  - Функция create_presence вызвана из функции main
+01-04-2022 22:43:29 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 23:31:15  - Функция create_presence вызвана из функции main
+01-04-2022 23:31:16 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 23:39:47  - Функция create_presence вызвана из функции main
+01-04-2022 23:39:50 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 23:46:02  - Функция create_presence вызвана из функции main
+01-04-2022 23:46:02 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 23:53:32  - Функция create_presence вызвана из функции main
+01-04-2022 23:53:37 Вызов create_presence из модуля: decor_2.py.
+01-04-2022 23:57:04  - Функция create_presence вызвана из функции main
+01-04-2022 23:57:05 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 00:08:20  - Функция create_presence вызвана из функции main
+02-04-2022 00:08:20 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 00:23:22  - Функция create_presence вызвана из функции main
+02-04-2022 00:23:23 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 00:38:51  - Функция create_presence вызвана из функции main
+02-04-2022 00:38:51 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 00:38:51  - Функция process_ans вызвана из функции main
+02-04-2022 00:38:51 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 00:38:51  - Функция message_from_server вызвана из функции run
+02-04-2022 00:38:51 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 00:42:19  - Функция create_presence вызвана из функции main
+02-04-2022 00:42:19 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 00:42:19  - Функция process_ans вызвана из функции main
+02-04-2022 00:42:19 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 00:42:19  - Функция message_from_server вызвана из функции run
+02-04-2022 00:42:19 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 00:54:02  - Функция create_presence вызвана из функции main
+02-04-2022 00:54:02 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 00:54:03  - Функция process_ans вызвана из функции main
+02-04-2022 00:54:03 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 00:55:52  - Функция create_message вызвана из функции user_interactive
+02-04-2022 00:55:52 Вызов create_message из модуля: decor_2.py.
+02-04-2022 00:59:07  - Функция create_presence вызвана из функции main
+02-04-2022 00:59:07 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 00:59:07  - Функция process_ans вызвана из функции main
+02-04-2022 00:59:07 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 00:59:07  - Функция create_presence вызвана из функции main
+02-04-2022 00:59:07 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 00:59:07  - Функция process_ans вызвана из функции main
+02-04-2022 00:59:07 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 00:59:08  - Функция create_presence вызвана из функции main
+02-04-2022 00:59:08 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 00:59:08  - Функция process_ans вызвана из функции main
+02-04-2022 00:59:08 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 00:59:08  - Функция create_presence вызвана из функции main
+02-04-2022 00:59:08 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 00:59:08  - Функция process_ans вызвана из функции main
+02-04-2022 00:59:08 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 00:59:08  - Функция create_presence вызвана из функции main
+02-04-2022 00:59:08 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 00:59:08  - Функция process_ans вызвана из функции main
+02-04-2022 00:59:08 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 01:00:06  - Функция create_message вызвана из функции user_interactive
+02-04-2022 01:00:06 Вызов create_message из модуля: decor_2.py.
+02-04-2022 01:01:11  - Функция message_from_server вызвана из функции run
+02-04-2022 01:01:11  - Функция message_from_server вызвана из функции run
+02-04-2022 01:01:11 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 01:01:11 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 12:06:57  - Функция create_presence вызвана из функции main
+02-04-2022 12:06:57 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 12:06:57  - Функция process_ans вызвана из функции main
+02-04-2022 12:06:57 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 12:06:57  - Функция create_presence вызвана из функции main
+02-04-2022 12:06:57 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 12:06:57  - Функция message_from_server вызвана из функции run
+02-04-2022 12:06:57 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 12:10:02  - Функция create_presence вызвана из функции main
+02-04-2022 12:10:02 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 12:10:02  - Функция process_ans вызвана из функции main
+02-04-2022 12:10:02 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 12:10:02  - Функция message_from_server вызвана из функции run
+02-04-2022 12:10:02 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 12:10:49  - Функция create_presence вызвана из функции main
+02-04-2022 12:10:49 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 12:10:50  - Функция process_ans вызвана из функции main
+02-04-2022 12:10:50 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 12:10:50  - Функция create_presence вызвана из функции main
+02-04-2022 12:10:50 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 12:10:50  - Функция process_ans вызвана из функции main
+02-04-2022 12:10:50 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 12:10:50  - Функция create_presence вызвана из функции main
+02-04-2022 12:10:50 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 12:10:50  - Функция process_ans вызвана из функции main
+02-04-2022 12:10:50 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 12:10:50  - Функция create_presence вызвана из функции main
+02-04-2022 12:10:50 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 12:10:50  - Функция process_ans вызвана из функции main
+02-04-2022 12:10:50 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 12:10:50  - Функция create_presence вызвана из функции main
+02-04-2022 12:10:50 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 12:10:50  - Функция process_ans вызвана из функции main
+02-04-2022 12:10:50 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 12:10:55  - Функция message_from_server вызвана из функции run
+02-04-2022 12:10:55  - Функция message_from_server вызвана из функции run
+02-04-2022 12:10:55  - Функция message_from_server вызвана из функции run
+02-04-2022 12:10:55  - Функция message_from_server вызвана из функции run
+02-04-2022 12:10:55  - Функция message_from_server вызвана из функции run
+02-04-2022 12:10:55 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 12:10:55 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 12:10:55 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 12:10:55 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 12:10:55 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 12:12:28  - Функция create_presence вызвана из функции main
+02-04-2022 12:12:28 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 12:12:28  - Функция process_ans вызвана из функции main
+02-04-2022 12:12:28 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 12:12:28  - Функция create_presence вызвана из функции main
+02-04-2022 12:12:28 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 12:12:29  - Функция process_ans вызвана из функции main
+02-04-2022 12:12:29 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 12:12:29  - Функция create_presence вызвана из функции main
+02-04-2022 12:12:29 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 12:12:29  - Функция process_ans вызвана из функции main
+02-04-2022 12:12:29 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 12:12:29  - Функция create_presence вызвана из функции main
+02-04-2022 12:12:29 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 12:12:29  - Функция process_ans вызвана из функции main
+02-04-2022 12:12:29 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 12:12:29  - Функция create_presence вызвана из функции main
+02-04-2022 12:12:29 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 12:12:29  - Функция process_ans вызвана из функции main
+02-04-2022 12:12:29 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 12:13:17  - Функция create_message вызвана из функции user_interactive
+02-04-2022 12:13:17 Вызов create_message из модуля: decor_2.py.
+02-04-2022 12:13:34  - Функция message_from_server вызвана из функции run
+02-04-2022 12:13:34 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 12:13:34  - Функция message_from_server вызвана из функции run
+02-04-2022 12:13:34  - Функция message_from_server вызвана из функции run
+02-04-2022 12:13:34  - Функция message_from_server вызвана из функции run
+02-04-2022 12:13:34  - Функция message_from_server вызвана из функции run
+02-04-2022 12:13:34 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 12:13:34 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 12:13:34 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 12:13:34 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 16:56:08  - Функция create_presence вызвана из функции main
+02-04-2022 16:56:08 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 16:56:08  - Функция process_ans вызвана из функции main
+02-04-2022 16:56:08 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 16:56:08  - Функция create_presence вызвана из функции main
+02-04-2022 16:56:08 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 16:56:08  - Функция process_ans вызвана из функции main
+02-04-2022 16:56:08 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 16:56:08  - Функция create_presence вызвана из функции main
+02-04-2022 16:56:08 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 16:56:08  - Функция process_ans вызвана из функции main
+02-04-2022 16:56:08 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 16:56:08  - Функция create_presence вызвана из функции main
+02-04-2022 16:56:08 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 16:56:09  - Функция process_ans вызвана из функции main
+02-04-2022 16:56:09 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 16:56:09  - Функция create_presence вызвана из функции main
+02-04-2022 16:56:09 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 16:56:09  - Функция process_ans вызвана из функции main
+02-04-2022 16:56:09 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 16:56:56  - Функция create_message вызвана из функции user_interactive
+02-04-2022 16:56:56 Вызов create_message из модуля: decor_2.py.
+02-04-2022 16:59:17  - Функция message_from_server вызвана из функции run
+02-04-2022 16:59:17 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 16:59:17  - Функция message_from_server вызвана из функции run
+02-04-2022 16:59:17  - Функция message_from_server вызвана из функции run
+02-04-2022 16:59:17  - Функция message_from_server вызвана из функции run
+02-04-2022 16:59:17  - Функция message_from_server вызвана из функции run
+02-04-2022 16:59:17 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 16:59:17 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 16:59:17 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 16:59:17 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 17:06:23  - Функция create_presence вызвана из функции main
+02-04-2022 17:06:23 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 17:06:23  - Функция process_ans вызвана из функции main
+02-04-2022 17:06:23 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 17:06:23  - Функция create_presence вызвана из функции main
+02-04-2022 17:06:23 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 17:06:23  - Функция process_ans вызвана из функции main
+02-04-2022 17:06:23 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 17:06:23  - Функция create_presence вызвана из функции main
+02-04-2022 17:06:23 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 17:06:23  - Функция process_ans вызвана из функции main
+02-04-2022 17:06:23 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 17:06:23  - Функция create_presence вызвана из функции main
+02-04-2022 17:06:23 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 17:06:24  - Функция process_ans вызвана из функции main
+02-04-2022 17:06:24 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 17:06:24  - Функция create_presence вызвана из функции main
+02-04-2022 17:06:24 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 17:06:24  - Функция process_ans вызвана из функции main
+02-04-2022 17:06:24 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 17:07:15  - Функция create_message вызвана из функции user_interactive
+02-04-2022 17:07:15 Вызов create_message из модуля: decor_2.py.
+02-04-2022 17:08:25  - Функция message_from_server вызвана из функции run
+02-04-2022 17:08:25 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 17:08:25  - Функция message_from_server вызвана из функции run
+02-04-2022 17:08:25  - Функция message_from_server вызвана из функции run
+02-04-2022 17:08:25  - Функция message_from_server вызвана из функции run
+02-04-2022 17:08:25  - Функция message_from_server вызвана из функции run
+02-04-2022 17:08:25 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 17:08:25 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 17:08:25 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 17:08:25 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 17:11:05  - Функция create_presence вызвана из функции main
+02-04-2022 17:11:05 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 17:11:05  - Функция process_ans вызвана из функции main
+02-04-2022 17:11:05 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 17:11:05  - Функция create_presence вызвана из функции main
+02-04-2022 17:11:05 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 17:11:06  - Функция process_ans вызвана из функции main
+02-04-2022 17:11:06 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 17:11:06  - Функция create_presence вызвана из функции main
+02-04-2022 17:11:06 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 17:11:06  - Функция process_ans вызвана из функции main
+02-04-2022 17:11:06 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 17:11:06  - Функция create_presence вызвана из функции main
+02-04-2022 17:11:06 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 17:11:06  - Функция process_ans вызвана из функции main
+02-04-2022 17:11:06 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 17:11:06  - Функция create_presence вызвана из функции main
+02-04-2022 17:11:06 Вызов create_presence из модуля: decor_2.py.
+02-04-2022 17:11:06  - Функция process_ans вызвана из функции main
+02-04-2022 17:11:06 Вызов process_ans из модуля: decor_2.py.
+02-04-2022 17:11:48  - Функция create_message вызвана из функции user_interactive
+02-04-2022 17:11:48 Вызов create_message из модуля: decor_2.py.
+02-04-2022 17:12:54  - Функция create_message вызвана из функции user_interactive
+02-04-2022 17:12:54 Вызов create_message из модуля: decor_2.py.
+02-04-2022 17:13:19  - Функция message_from_server вызвана из функции run
+02-04-2022 17:13:19 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 17:13:19  - Функция message_from_server вызвана из функции run
+02-04-2022 17:13:19  - Функция message_from_server вызвана из функции run
+02-04-2022 17:13:19  - Функция message_from_server вызвана из функции run
+02-04-2022 17:13:19  - Функция message_from_server вызвана из функции run
+02-04-2022 17:13:19 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 17:13:19 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 17:13:19 Вызов message_from_server из модуля: decor_2.py.
+02-04-2022 17:13:19 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 00:34:49  - Функция create_presence вызвана из функции main
+03-04-2022 00:34:49 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 00:35:28  - Функция process_ans вызвана из функции main
+03-04-2022 00:35:29 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 00:36:56  - Функция create_message вызвана из функции user_interactive
+03-04-2022 00:36:56 Вызов create_message из модуля: decor_2.py.
+03-04-2022 00:39:24  - Функция create_presence вызвана из функции main
+03-04-2022 00:39:24 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 00:39:24  - Функция process_ans вызвана из функции main
+03-04-2022 00:39:24 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 00:43:46  - Функция create_message вызвана из функции user_interactive
+03-04-2022 00:43:49 Вызов create_message из модуля: decor_2.py.
+03-04-2022 00:44:18  - Функция message_from_server вызвана из функции run
+03-04-2022 00:44:18 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 01:04:24  - Функция create_presence вызвана из функции main
+03-04-2022 01:04:24 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 01:04:24  - Функция process_ans вызвана из функции main
+03-04-2022 01:04:24 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 01:07:34  - Функция create_message вызвана из функции user_interactive
+03-04-2022 01:07:34 Вызов create_message из модуля: decor_2.py.
+03-04-2022 01:09:11  - Функция message_from_server вызвана из функции run
+03-04-2022 01:09:11 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 01:09:26  - Функция create_presence вызвана из функции main
+03-04-2022 01:09:26 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 01:09:26  - Функция process_ans вызвана из функции main
+03-04-2022 01:09:26 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 01:09:59  - Функция create_message вызвана из функции user_interactive
+03-04-2022 01:09:59 Вызов create_message из модуля: decor_2.py.
+03-04-2022 01:12:35  - Функция message_from_server вызвана из функции run
+03-04-2022 01:12:35 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 02:01:08  - Функция create_presence вызвана из функции main
+03-04-2022 02:01:08 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:01:09  - Функция process_ans вызвана из функции main
+03-04-2022 02:01:09 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:01:38  - Функция create_message вызвана из функции user_interactive
+03-04-2022 02:01:38 Вызов create_message из модуля: decor_2.py.
+03-04-2022 02:03:35  - Функция message_from_server вызвана из функции run
+03-04-2022 02:03:35 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 02:05:40  - Функция create_presence вызвана из функции main
+03-04-2022 02:05:40 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:05:40  - Функция process_ans вызвана из функции main
+03-04-2022 02:05:40 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:06:03  - Функция create_message вызвана из функции user_interactive
+03-04-2022 02:06:03 Вызов create_message из модуля: decor_2.py.
+03-04-2022 02:21:30  - Функция create_presence вызвана из функции main
+03-04-2022 02:21:30 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:21:30  - Функция process_ans вызвана из функции main
+03-04-2022 02:21:30 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:21:53  - Функция create_message вызвана из функции user_interactive
+03-04-2022 02:21:53 Вызов create_message из модуля: decor_2.py.
+03-04-2022 02:22:11  - Функция message_from_server вызвана из функции run
+03-04-2022 02:22:35  - Функция create_presence вызвана из функции main
+03-04-2022 02:22:35 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:22:36  - Функция process_ans вызвана из функции main
+03-04-2022 02:22:36 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:23:03  - Функция create_message вызвана из функции user_interactive
+03-04-2022 02:23:03 Вызов create_message из модуля: decor_2.py.
+03-04-2022 02:36:53  - Функция message_from_server вызвана из функции run
+03-04-2022 02:36:53 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 02:37:03  - Функция create_presence вызвана из функции main
+03-04-2022 02:37:03 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:37:03  - Функция process_ans вызвана из функции main
+03-04-2022 02:37:03 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:37:28  - Функция create_message вызвана из функции user_interactive
+03-04-2022 02:37:28 Вызов create_message из модуля: decor_2.py.
+03-04-2022 02:38:16  - Функция message_from_server вызвана из функции run
+03-04-2022 02:38:16 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 02:41:52  - Функция create_presence вызвана из функции main
+03-04-2022 02:41:52 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:41:52  - Функция process_ans вызвана из функции main
+03-04-2022 02:41:52 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:42:11  - Функция create_message вызвана из функции user_interactive
+03-04-2022 02:42:11 Вызов create_message из модуля: decor_2.py.
+03-04-2022 02:43:06  - Функция message_from_server вызвана из функции run
+03-04-2022 02:43:06 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 02:43:29  - Функция create_presence вызвана из функции main
+03-04-2022 02:43:29 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:43:29  - Функция process_ans вызвана из функции main
+03-04-2022 02:43:29 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:43:29  - Функция create_presence вызвана из функции main
+03-04-2022 02:43:29 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:43:29  - Функция process_ans вызвана из функции main
+03-04-2022 02:43:29 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:43:29  - Функция create_presence вызвана из функции main
+03-04-2022 02:43:29 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:43:29  - Функция process_ans вызвана из функции main
+03-04-2022 02:43:29 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:43:29  - Функция create_presence вызвана из функции main
+03-04-2022 02:43:29 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:43:30  - Функция process_ans вызвана из функции main
+03-04-2022 02:43:30 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:43:30  - Функция create_presence вызвана из функции main
+03-04-2022 02:43:30 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:43:30  - Функция process_ans вызвана из функции main
+03-04-2022 02:43:30 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:44:04  - Функция create_message вызвана из функции user_interactive
+03-04-2022 02:44:04 Вызов create_message из модуля: decor_2.py.
+03-04-2022 02:44:49  - Функция message_from_server вызвана из функции run
+03-04-2022 02:44:49 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 02:48:27  - Функция create_presence вызвана из функции main
+03-04-2022 02:48:27 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:48:27  - Функция process_ans вызвана из функции main
+03-04-2022 02:48:27 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:49:01  - Функция create_message вызвана из функции user_interactive
+03-04-2022 02:49:01 Вызов create_message из модуля: decor_2.py.
+03-04-2022 02:49:39  - Функция message_from_server вызвана из функции run
+03-04-2022 02:49:39 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 02:51:41  - Функция create_presence вызвана из функции main
+03-04-2022 02:51:41 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:51:41  - Функция process_ans вызвана из функции main
+03-04-2022 02:51:41 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:53:14  - Функция message_from_server вызвана из функции run
+03-04-2022 02:53:14 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 02:54:25  - Функция create_presence вызвана из функции main
+03-04-2022 02:54:25 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:54:25  - Функция process_ans вызвана из функции main
+03-04-2022 02:54:25 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:59:44  - Функция message_from_server вызвана из функции run
+03-04-2022 02:59:44 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 02:59:56  - Функция create_presence вызвана из функции main
+03-04-2022 02:59:56 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:59:56  - Функция process_ans вызвана из функции main
+03-04-2022 02:59:56 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:59:56  - Функция create_presence вызвана из функции main
+03-04-2022 02:59:56 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:59:56  - Функция process_ans вызвана из функции main
+03-04-2022 02:59:56 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:59:56  - Функция create_presence вызвана из функции main
+03-04-2022 02:59:56 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:59:57  - Функция process_ans вызвана из функции main
+03-04-2022 02:59:57 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:59:57  - Функция create_presence вызвана из функции main
+03-04-2022 02:59:57 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:59:57  - Функция process_ans вызвана из функции main
+03-04-2022 02:59:57 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 02:59:57  - Функция create_presence вызвана из функции main
+03-04-2022 02:59:57 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 02:59:57  - Функция process_ans вызвана из функции main
+03-04-2022 02:59:57 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 03:00:26  - Функция create_message вызвана из функции user_interactive
+03-04-2022 03:00:26 Вызов create_message из модуля: decor_2.py.
+03-04-2022 03:00:26  - Функция message_from_server вызвана из функции run
+03-04-2022 03:00:26  - Функция message_from_server вызвана из функции run
+03-04-2022 03:00:26 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:00:26  - Функция message_from_server вызвана из функции run
+03-04-2022 03:00:26  - Функция message_from_server вызвана из функции run
+03-04-2022 03:00:26 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:00:26  - Функция message_from_server вызвана из функции run
+03-04-2022 03:00:26 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:00:26 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:00:26 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:13:10  - Функция create_presence вызвана из функции main
+03-04-2022 03:13:10 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 03:13:11  - Функция process_ans вызвана из функции main
+03-04-2022 03:13:11 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 03:13:11  - Функция create_presence вызвана из функции main
+03-04-2022 03:13:11 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 03:13:11  - Функция process_ans вызвана из функции main
+03-04-2022 03:13:11 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 03:13:11  - Функция create_presence вызвана из функции main
+03-04-2022 03:13:11 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 03:13:11  - Функция process_ans вызвана из функции main
+03-04-2022 03:13:11 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 03:13:11  - Функция create_presence вызвана из функции main
+03-04-2022 03:13:11 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 03:13:11  - Функция process_ans вызвана из функции main
+03-04-2022 03:13:11 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 03:13:11  - Функция create_presence вызвана из функции main
+03-04-2022 03:13:11 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 03:13:12  - Функция process_ans вызвана из функции main
+03-04-2022 03:13:12 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 03:15:02  - Функция create_message вызвана из функции user_interactive
+03-04-2022 03:15:02 Вызов create_message из модуля: decor_2.py.
+03-04-2022 03:15:52  - Функция create_message вызвана из функции user_interactive
+03-04-2022 03:15:52 Вызов create_message из модуля: decor_2.py.
+03-04-2022 03:16:21  - Функция create_message вызвана из функции user_interactive
+03-04-2022 03:16:21 Вызов create_message из модуля: decor_2.py.
+03-04-2022 03:16:48  - Функция message_from_server вызвана из функции run
+03-04-2022 03:16:48 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:16:48  - Функция message_from_server вызвана из функции run
+03-04-2022 03:16:48  - Функция message_from_server вызвана из функции run
+03-04-2022 03:16:48  - Функция message_from_server вызвана из функции run
+03-04-2022 03:16:48  - Функция message_from_server вызвана из функции run
+03-04-2022 03:16:48 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:16:48 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:16:48 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:16:48 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:21:31  - Функция create_presence вызвана из функции main
+03-04-2022 03:21:31 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 03:21:31  - Функция process_ans вызвана из функции main
+03-04-2022 03:21:31 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 03:21:31  - Функция create_presence вызвана из функции main
+03-04-2022 03:21:31 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 03:21:32  - Функция process_ans вызвана из функции main
+03-04-2022 03:21:32 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 03:21:32  - Функция create_presence вызвана из функции main
+03-04-2022 03:21:32 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 03:21:32  - Функция process_ans вызвана из функции main
+03-04-2022 03:21:32 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 03:21:32  - Функция create_presence вызвана из функции main
+03-04-2022 03:21:32 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 03:21:32  - Функция process_ans вызвана из функции main
+03-04-2022 03:21:32 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 03:21:32  - Функция create_presence вызвана из функции main
+03-04-2022 03:21:32 Вызов create_presence из модуля: decor_2.py.
+03-04-2022 03:21:32  - Функция process_ans вызвана из функции main
+03-04-2022 03:21:32 Вызов process_ans из модуля: decor_2.py.
+03-04-2022 03:22:12  - Функция create_message вызвана из функции user_interactive
+03-04-2022 03:22:12 Вызов create_message из модуля: decor_2.py.
+03-04-2022 03:22:30  - Функция message_from_server вызвана из функции run
+03-04-2022 03:22:30 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:22:30  - Функция message_from_server вызвана из функции run
+03-04-2022 03:22:30  - Функция message_from_server вызвана из функции run
+03-04-2022 03:22:30  - Функция message_from_server вызвана из функции run
+03-04-2022 03:22:30  - Функция message_from_server вызвана из функции run
+03-04-2022 03:22:30 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:22:30 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:22:30 Вызов message_from_server из модуля: decor_2.py.
+03-04-2022 03:22:30 Вызов message_from_server из модуля: decor_2.py.
+06-04-2022 21:07:54  - Функция create_presence вызвана из функции main
+06-04-2022 21:07:54 Вызов create_presence из модуля: decor_2.py.
+06-04-2022 21:07:55  - Функция process_ans вызвана из функции main
+06-04-2022 21:07:55 Вызов process_ans из модуля: decor_2.py.
+06-04-2022 21:07:55  - Функция create_presence вызвана из функции main
+06-04-2022 21:07:55 Вызов create_presence из модуля: decor_2.py.
+06-04-2022 21:07:55  - Функция process_ans вызвана из функции main
+06-04-2022 21:07:55 Вызов process_ans из модуля: decor_2.py.
+06-04-2022 21:07:55  - Функция create_presence вызвана из функции main
+06-04-2022 21:07:55 Вызов create_presence из модуля: decor_2.py.
+06-04-2022 21:07:55  - Функция process_ans вызвана из функции main
+06-04-2022 21:07:55 Вызов process_ans из модуля: decor_2.py.
+06-04-2022 21:07:55  - Функция create_presence вызвана из функции main
+06-04-2022 21:07:55 Вызов create_presence из модуля: decor_2.py.
+06-04-2022 21:07:55  - Функция process_ans вызвана из функции main
+06-04-2022 21:07:55 Вызов process_ans из модуля: decor_2.py.
+06-04-2022 21:07:55  - Функция create_presence вызвана из функции main
+06-04-2022 21:07:55 Вызов create_presence из модуля: decor_2.py.
+06-04-2022 21:07:56  - Функция process_ans вызвана из функции main
+06-04-2022 21:07:56 Вызов process_ans из модуля: decor_2.py.
+06-04-2022 21:25:14  - Функция create_presence вызвана из функции main
+06-04-2022 21:25:14 Вызов create_presence из модуля: decor_2.py.
+06-04-2022 21:25:14  - Функция process_ans вызвана из функции main
+06-04-2022 21:25:14 Вызов process_ans из модуля: decor_2.py.
+06-04-2022 21:25:14  - Функция create_presence вызвана из функции main
+06-04-2022 21:25:14 Вызов create_presence из модуля: decor_2.py.
+06-04-2022 21:25:14  - Функция process_ans вызвана из функции main
+06-04-2022 21:25:14 Вызов process_ans из модуля: decor_2.py.
+06-04-2022 21:25:14  - Функция create_presence вызвана из функции main
+06-04-2022 21:25:14 Вызов create_presence из модуля: decor_2.py.
+06-04-2022 21:25:14  - Функция process_ans вызвана из функции main
+06-04-2022 21:25:14 Вызов process_ans из модуля: decor_2.py.
+06-04-2022 21:25:14  - Функция create_presence вызвана из функции main
+06-04-2022 21:25:14 Вызов create_presence из модуля: decor_2.py.
+06-04-2022 21:25:14  - Функция process_ans вызвана из функции main
+06-04-2022 21:25:14 Вызов process_ans из модуля: decor_2.py.
+06-04-2022 21:25:14  - Функция create_presence вызвана из функции main
+06-04-2022 21:25:14 Вызов create_presence из модуля: decor_2.py.
+06-04-2022 21:25:15  - Функция process_ans вызвана из функции main
+06-04-2022 21:25:15 Вызов process_ans из модуля: decor_2.py.
