@@ -6,6 +6,8 @@ import json
 import socket
 import threading
 import time
+
+from QT_3.data_base import active_users_list
 from errors import *
 from common.variables import ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, \
     RESPONSE, ERROR, DEFAULT_IP_ADDRESS, DEFAULT_PORT, EXIT, DESTINATION, MESSAGE, MESSAGE_TEXT, SENDER
@@ -71,12 +73,25 @@ class Client_sender(threading.Thread, metaclass=CliSupervisor):
             elif command == 'help':
                 self.print_help()
             elif command == 'exit':
-                self.send_message(self.sock, self.create_exit_message())
-                print('Завершение соединения.')
-                LOGGER.info('Завершение работы по команде пользователя.')
+                try:
+                    print('Завершение соединения.')
+                    LOGGER.info('Завершение работы по команде пользователя.')
+                    send_message(self.sock, self.create_exit_message())
+                except:
+                    pass
                 # Задержка неоходима, чтобы успело уйти сообщение о выходе
                 time.sleep(0.5)
                 break
+            #Вызов списка активных пользователей
+            elif command == 'active_list':
+                # если список пуст, так и пишем
+                if not active_users_list(self.account_name):
+                    print('Вы один активный, остальные все пассивные')
+                else:
+                    # если есть активные пользователи кроме самого клиента, выводим их список
+                    for user in sorted(active_users_list(self.account_name)):
+                        print(
+                            f'Пользователь {user[0]}, подключен: {user[1]}:{user[2]}, время установки соединения: {user[3]}')
             else:
                 print('Команда не распознана, попробойте снова. help - вывести поддерживаемые команды.')
 
@@ -85,6 +100,7 @@ class Client_sender(threading.Thread, metaclass=CliSupervisor):
         print('Поддерживаемые команды:')
         print('message - отправить сообщение. Кому и текст будет запрошены отдельно.')
         print('help - вывести подсказки по командам')
+        print('active_list - вывести список доступных пользователей')
         print('exit - выход из программы')
 
 class Client_reader(threading.Thread, metaclass=CliSupervisor):
@@ -232,7 +248,7 @@ def main():
         sender = Client_sender(client_name, transport)
         sender.daemon = True
         sender.start()
-        LOGGER.debug('Запущены процессы, ой запущены')
+        LOGGER.debug('Запущены процессы')
 
         # Watchdog основной цикл, если один из потоков завершён,
         # то значит или потеряно соединение или пользователь
