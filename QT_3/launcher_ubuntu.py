@@ -34,7 +34,6 @@ while True:
         for i in range(5):
             process.append(get_subprocess(f"client.py -n cli{i+1}"))
 
-
     elif action == "x":
         while process:
             victim = process.pop()
