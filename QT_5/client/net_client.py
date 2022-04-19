@@ -69,7 +69,7 @@ class NetClient(threading.Thread, QObject):
             LOGGER.info(f"Моя попытка №{i}")
             try:
                 transport.connect((ip_address, port))
-            except (OSError,ConnectionRefusedError, ConnectionError):
+            except (OSError, ConnectionRefusedError, ConnectionError):
                 LOGGER.info(f"Моя попытка №{i} не удалась")
                 pass
             else:
@@ -99,7 +99,6 @@ class NetClient(threading.Thread, QObject):
             LOGGER.error(f'В ответе сервера отсутствует необходимое поле {missing_error.missing_field}')
             sys.exit(1)
 
-
     def create_presence(self, account_name):
         out = {
             ACTION: PRESENCE,
@@ -127,22 +126,77 @@ class NetClient(threading.Thread, QObject):
 
         # Если это сообщение от пользователя добавляем в базу, даём сигнал о новом сообщении
         elif ACTION in message \
-                 and message[ACTION] == MESSAGE \
-                 and SENDER in message \
-                 and DESTINATION in message \
-                 and MESSAGE_TEXT in message \
-                 and message[DESTINATION] == self.username:
+                and message[ACTION] == MESSAGE \
+                and SENDER in message \
+                and DESTINATION in message \
+                and MESSAGE_TEXT in message \
+                and message[DESTINATION] == self.username:
             LOGGER.debug(f'Получено сообщение от пользователя {message[SENDER]}:'
                          f'{message[MESSAGE_TEXT]}')
             self.db.save_message(message[SENDER], 'in', message[MESSAGE_TEXT])
             self.new_msg.emit(message[SENDER])
 
+        # Функция, обновляющая контакт - лист с сервера
 
+    def contacts_list_update(self):
+        logger.debug(f'Запрос контакт листа для пользователя {self.name}')
+        req = {
+            ACTION: GET_CONTACTS,
+            TIME: time.time(),
+            USER: self.username
+        }
+        logger.debug(f'Сформирован запрос {req}')
+        with socket_lock:
+            send_message(self.transport, req)
+            ans = get_message(self.transport)
+        logger.debug(f'Получен ответ {ans}')
+        if RESPONSE in ans and ans[RESPONSE] == 202:
+            for contact in ans[LIST_INFO]:
+                self.database.add_contact(contact)
+        else:
+            logger.error('Не удалось обновить список контактов.')
 
+    # Функция обновления таблицы известных пользователей.
+    def user_list_update(self):
+        logger.debug(f'Запрос списка известных пользователей {self.username}')
+        req = {
+            ACTION: USERS_REQUEST,
+            TIME: time.time(),
+            ACCOUNT_NAME: self.username
+        }
+        with socket_lock:
+            send_message(self.transport, req)
+            ans = get_message(self.transport)
+        if RESPONSE in ans and ans[RESPONSE] == 202:
+            self.database.add_users(ans[LIST_INFO])
+        else:
+            logger.error('Не удалось обновить список известных пользователей.')
 
+    # Функция сообщающая на сервер о добавлении нового контакта
+    def add_contact(self, contact):
+        logger.debug(f'Создание контакта {contact}')
+        req = {
+            ACTION: ADD_CONTACT,
+            TIME: time.time(),
+            USER: self.username,
+            ACCOUNT_NAME: contact
+        }
+        with socket_lock:
+            send_message(self.transport, req)
+            self.process_server_ans(get_message(self.transport))
 
-
-
+    # Функция удаления клиента на сервере
+    def remove_contact(self, contact):
+        logger.debug(f'Удаление контакта {contact}')
+        req = {
+            ACTION: REMOVE_CONTACT,
+            TIME: time.time(),
+            USER: self.username,
+            ACCOUNT_NAME: contact
+        }
+        with socket_lock:
+            send_message(self.transport, req)
+            self.process_server_ans(get_message(self.transport))
 
     def exit_chat(self):
         """Функция выставляет флаг running в false и посылает на сервер
@@ -166,10 +220,6 @@ class NetClient(threading.Thread, QObject):
                 pass
         LOGGER.debug('Транспорт завершает работу.')
         time.sleep(0.5)
-
-
-
-
 
     # @log
     def create_message(self, to_user, message):
@@ -250,5 +300,3 @@ class NetClient(threading.Thread, QObject):
 
             else:
                 print('Команда не распознана, попробойте снова. help - вывести поддерживаемые команды.')
-
-
