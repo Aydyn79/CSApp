@@ -1,14 +1,10 @@
 """Программа-клиент"""
 import argparse
-import logging
-import sys
-import json
 import socket
 import threading
 import time
 from client_base import ClientDatabase
-from server_base import Server_db
-from errors import *
+from QT_5.common.errors import *
 from common.variables import *
 from common.utils import *
 from meta_detect import CliSupervisor
