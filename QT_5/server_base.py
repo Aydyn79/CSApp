@@ -1,13 +1,15 @@
 import datetime
+import os
 
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-engine = create_engine('sqlite:///declarative_style_base.db3', echo=False)
+# engine = create_engine('sqlite:///server_base.db3', echo=False)
 
 Base = declarative_base()
 
+path = os.path.join(os.path.dirname(os.path.realpath(__file__)), f'server_base.db3')
 
 class Server_db:
     # Класс - описание таблиц сервера
@@ -103,8 +105,7 @@ class Server_db:
         self.sess.query(self.Active_Users).delete()
         self.sess.commit()
 
-        # Функция выполняющаяся при входе пользователя, записывает в базу факт входа
-
+    # Функция выполняющаяся при входе пользователя, записывает в базу факт входа
     def user_login(self, username, ip_address, port):
         print()
         print(username, ip_address, port)
@@ -123,6 +124,8 @@ class Server_db:
             # Коммит здесь нужен для того, чтобы создать нового пользователя,
             # id которого будет использовано для добавления в таблицу активных пользователей
             self.sess.commit()
+            user_in_history = self.Users_History(user.id)
+            self.sess.add(user_in_history)
 
         # Теперь можно создать запись в таблицу активных пользователей о факте входа.
         # Создаём экземпляр класса self.ActiveUsers, через который передаём данные в таблицу
@@ -168,10 +171,10 @@ class Server_db:
             self.Active_Users.login_time
         ).join(self.All_Users)
         # Возвращаем список кортежей
-        if username:
-            query = query.filter(self.All_Users.name != username)
-            # Возвращаем список активных пользователей за исключением пользователя запросившего этот список
-            print(query.all())
+        # if username:
+        #     query = query.filter(self.All_Users.name != username)
+        #     # Возвращаем список активных пользователей за исключением пользователя запросившего этот список
+        #     print(query.all())
         return query.all()
 
     # Функция, возвращающая историю входов по пользователю или всем пользователям
@@ -230,16 +233,6 @@ class Server_db:
         ).delete())
         self.sess.commit()
 
-    # Функция возвращает список известных пользователей со временем последнего входа.
-    def users_list(self):
-        # Запрос строк таблицы пользователей.
-        query = self.sess.query(
-            self.All_Users.name,
-            self.All_Users.login_time
-        )
-        # Возвращаем список кортежей
-        return query.all()
-
     # Функция возвращает список контактов пользователя.
     def get_contacts(self, username):
         # Запрашиваем указанного пользователя
@@ -264,7 +257,13 @@ class Server_db:
         # Возвращаем список кортежей
         return query.all()
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
+    test_db = Server_db(path)
+    test_db.user_login('1111', '192.168.1.113', 8080)
+    test_db.user_login('McG2', '192.168.1.113', 8081)
+    print(test_db.users_list())
+
+
 # user = All_Users("ДжавахарлалНеру")
 # sess.add(user)
 # sess.commit()

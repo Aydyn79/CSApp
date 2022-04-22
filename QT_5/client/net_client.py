@@ -8,21 +8,18 @@ import time
 
 from PyQt5.QtCore import pyqtSignal, QObject
 
+sys.path.append('../')
 from common.errors import ReqFieldMissingError
 from client_base import ClientDatabase
-from config_client_log import LOGGER
-from utils import valid_ip, send_message, get_message
-from variables import ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, RESPONSE, ERROR, EXIT, MESSAGE, SENDER, DESTINATION, \
-    MESSAGE_TEXT
-
-sys.path.append('../')
-from common.utils import *
-from common.variables import *
+from logs.config_client_log import LOGGER
+from common.utils import valid_ip, send_message, get_message
+from common.variables import ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, RESPONSE, ERROR, EXIT, MESSAGE, SENDER, DESTINATION, \
+    MESSAGE_TEXT, GET_CONTACTS, LIST_INFO, ADD_CONTACT, USER_REQUEST, REMOVE_CONTACT
 from common.errors import ServerError
 
 # переменная блокировки для работы с сокетом.
 lock_sock = threading.Lock()
-
+lock_db = threading.Lock()
 
 # Класс - Транспорт, отвечает за взаимодействие с сервером
 class NetClient(threading.Thread, QObject):
@@ -42,7 +39,7 @@ class NetClient(threading.Thread, QObject):
         # Сокет для работы с сервером
         self.transport = None
         # Устанавливаем соединение:
-        self.connection_init(port, ip_address)
+        self.data_exchange_init(port, ip_address)
         # Обновляем таблицы известных пользователей и контактов
         try:
             self.user_list_update()
@@ -58,17 +55,17 @@ class NetClient(threading.Thread, QObject):
             # Флаг продолжения работы транспорта.
         self.running = True
 
-    def data_exchange_init(self, port, ip_address, username):
+    def data_exchange_init(self, port, ip_address):
         """Сообщаем о запуске"""
-        LOGGER.info(f'Запущен клиент {username} с параметрами: '
+        LOGGER.info(f'Запущен клиент {self.username} с параметрами: '
                     f'адрес сервера: {ip_address}, порт: {port}')
-        transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         # Таймаут для освобождения сокета.
-        transport.settimeout(5)
+        self.transport.settimeout(5)
         for i in range(5):
             LOGGER.info(f"Моя попытка №{i}")
             try:
-                transport.connect((ip_address, port))
+                self.transport.connect((ip_address, port))
             except (OSError, ConnectionRefusedError, ConnectionError):
                 LOGGER.info(f"Моя попытка №{i} не удалась")
                 pass
@@ -85,7 +82,7 @@ class NetClient(threading.Thread, QObject):
         # Посылаем серверу приветственное сообщение и получаем ответ,
         # что всё нормально или ловим исключение.
         try:
-            send_message(transport, self.create_presence(self.username))
+            send_message(self.transport, self.create_presence(self.username))
             answer = self.process_ans(get_message(self.transport))
             LOGGER.info(f'Установлено соединение с сервером. Ответ сервера: {answer}')
             print(f'Установлено соединение с сервером.')
@@ -139,64 +136,64 @@ class NetClient(threading.Thread, QObject):
         # Функция, обновляющая контакт - лист с сервера
 
     def contacts_list_update(self):
-        logger.debug(f'Запрос контакт листа для пользователя {self.name}')
+        LOGGER.debug(f'Запрос контакт листа для пользователя {self.name}')
         req = {
             ACTION: GET_CONTACTS,
             TIME: time.time(),
             USER: self.username
         }
-        logger.debug(f'Сформирован запрос {req}')
-        with socket_lock:
+        LOGGER.debug(f'Сформирован запрос {req}')
+        with lock_sock:
             send_message(self.transport, req)
             ans = get_message(self.transport)
-        logger.debug(f'Получен ответ {ans}')
+        LOGGER.debug(f'Получен ответ {ans}')
         if RESPONSE in ans and ans[RESPONSE] == 202:
             for contact in ans[LIST_INFO]:
-                self.database.add_contact(contact)
+                self.db.add_contact(contact)
         else:
-            logger.error('Не удалось обновить список контактов.')
+            LOGGER.error('Не удалось обновить список контактов.')
 
     # Функция обновления таблицы известных пользователей.
     def user_list_update(self):
-        logger.debug(f'Запрос списка известных пользователей {self.username}')
+        LOGGER.debug(f'Запрос списка известных пользователей {self.username}')
         req = {
-            ACTION: USERS_REQUEST,
+            ACTION: USER_REQUEST,
             TIME: time.time(),
             ACCOUNT_NAME: self.username
         }
-        with socket_lock:
+        with lock_sock:
             send_message(self.transport, req)
             ans = get_message(self.transport)
         if RESPONSE in ans and ans[RESPONSE] == 202:
-            self.database.add_users(ans[LIST_INFO])
+            self.db.add_users(ans[LIST_INFO])
         else:
-            logger.error('Не удалось обновить список известных пользователей.')
+            LOGGER.error('Не удалось обновить список известных пользователей.')
 
     # Функция сообщающая на сервер о добавлении нового контакта
     def add_contact(self, contact):
-        logger.debug(f'Создание контакта {contact}')
+        LOGGER.debug(f'Создание контакта {contact}')
         req = {
             ACTION: ADD_CONTACT,
             TIME: time.time(),
             USER: self.username,
             ACCOUNT_NAME: contact
         }
-        with socket_lock:
+        with lock_sock:
             send_message(self.transport, req)
-            self.process_server_ans(get_message(self.transport))
+            self.process_ans(get_message(self.transport))
 
     # Функция удаления клиента на сервере
     def remove_contact(self, contact):
-        logger.debug(f'Удаление контакта {contact}')
+        LOGGER.debug(f'Удаление контакта {contact}')
         req = {
             ACTION: REMOVE_CONTACT,
             TIME: time.time(),
             USER: self.username,
             ACCOUNT_NAME: contact
         }
-        with socket_lock:
+        with lock_sock:
             send_message(self.transport, req)
-            self.process_server_ans(get_message(self.transport))
+            self.process_ans(get_message(self.transport))
 
     def exit_chat(self):
         """Функция выставляет флаг running в false и посылает на сервер
@@ -218,7 +215,7 @@ class NetClient(threading.Thread, QObject):
                 send_message(self.transport, mess)
             except OSError:
                 pass
-        LOGGER.debug('Транспорт завершает работу.')
+        LOGGER.debug('Клиент завершает работу.')
         time.sleep(0.5)
 
     # @log
@@ -228,7 +225,7 @@ class NetClient(threading.Thread, QObject):
         """
         message_dict = {
             ACTION: MESSAGE,
-            SENDER: self.account_name,
+            SENDER: self.username,
             DESTINATION: to_user,
             TIME: time.time(),
             MESSAGE_TEXT: message
@@ -236,11 +233,11 @@ class NetClient(threading.Thread, QObject):
         LOGGER.debug(f'Сформирован словарь сообщения: {message_dict}')
 
         with lock_db:
-            self.db.save_message(self.account_name, to_user, message)
+            self.db.save_message(self.username, to_user, message)
 
-        with lock_socket:
+        with lock_sock:
             try:
-                send_message(self.sock, message_dict)
+                send_message(self.transport, message_dict)
                 LOGGER.info(f'Отправлено сообщение для пользователя {to_user}')
             except OSError as e:
                 if e.errno:
@@ -253,50 +250,30 @@ class NetClient(threading.Thread, QObject):
     # @log
     def run(self):
         """Функция взаимодействия с пользователем, запрашивает команды, отправляет сообщения"""
-        self.print_help()
-        while True:
-            command = input('Введите команду: ')
-            if command == 'mess':
-                self.create_message()
-            elif command == 'help':
-                self.print_help()
-            elif command == 'exit':
-                with lock_socket:
-                    try:
-                        print('Завершение соединения.')
-                        LOGGER.info('Завершение работы по команде пользователя.')
-                        send_message(self.sock, self.create_exit_message())
-                    except:
-                        pass
-                    LOGGER.info('Завершение работы пользователя')
-                # Задержка неоходима, чтобы успело уйти сообщение о выходе
-                time.sleep(0.5)
-                break
-            # Вызов списка активных пользователей
-            elif command == 'cont':
-                with lock_db:
-                    contacts_list = self.db.get_contacts()
-                for contact in contacts_list:
-                    print(contact)
+        LOGGER.info('Запущен приём сообщений с сервера.')
+        while self.running:
+            time.sleep(1)
+            with lock_sock:
+                try:
+                    self.transport.settimeout(0.5)
+                    message = get_message(self.transport)
+                except OSError as err:
+                    if err.errno:
+                        LOGGER.critical(f'Потеряно соединение с сервером.')
+                        self.running = False
+                        self.connection_lost.emit()
+                # Проблемы с соединением
+                except (ConnectionError, ConnectionAbortedError,
+                        ConnectionResetError, json.JSONDecodeError, TypeError):
+                    LOGGER.debug(f'Потеряно соединение с сервером.')
+                    self.running = False
+                    self.connection_lost.emit()
+                # Если сообщение получено, то вызываем функцию обработчик:
+                else:
+                    LOGGER.debug(f'Принято сообщение с сервера: {message}')
+                    self.process_ans(message)
+                finally:
+                    self.transport.settimeout(5)
 
-            # elif command == 'actv':
-            #     with lock_db:
-            #         # если список пуст, так и пишем
-            #         if not Server_db.active_users_list(self.account_name):
-            #             print('Вы один активный, остальные все пассивные')
-            #         else:
-            #             # если есть активные пользователи кроме самого клиента, выводим их список
-            #             for user in sorted(Server_db.active_users_list(self.account_name)):
-            #                 print(
-            #                     f'Пользователь {user[0]}, подключен: {user[1]}:{user[2]}, время установки соединения: {user[3]}')
 
-            # Редактирование контактов
-            elif command == 'edit':
-                self.edit_contacts()
 
-            # история сообщений.
-            elif command == 'hist':
-                self.print_history()
-
-            else:
-                print('Команда не распознана, попробойте снова. help - вывести поддерживаемые команды.')

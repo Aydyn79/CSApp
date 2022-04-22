@@ -14,7 +14,8 @@ from descript import Port, Address
 
 from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, MAX_CONNECTIONS, \
     PRESENCE, TIME, USER, ERROR, RESPONDEFAULT_IP_ADDRESSSE, RESPONSE_400, RESPONSE_200, DESTINATION, \
-    MESSAGE, MESSAGE_TEXT, SENDER, EXIT, GET_CONTACTS, LIST_INFO, ADD_CONTACT, DEL_CONTACT, USER_REQUEST, RESPONSE_202
+    MESSAGE, MESSAGE_TEXT, SENDER, EXIT, GET_CONTACTS, LIST_INFO, ADD_CONTACT, DEL_CONTACT, USER_REQUEST, RESPONSE_202, \
+    DEFAULT_PORT
 from common.utils import get_message, send_message
 from logs.config_server_log import LOGGER
 from server_base import Server_db
@@ -31,7 +32,7 @@ conflag_lock = threading.Lock()
 
 class Server(threading.Thread, metaclass=ServSupervisor):
     port = Port()
-    # addr = Address()
+    addr = Address()
     def __init__(self, listen_address, listen_port, db):
         # Параметры подключения
         self.addr = listen_address
@@ -64,6 +65,7 @@ class Server(threading.Thread, metaclass=ServSupervisor):
         self.sock.listen()
 
     def run(self):
+        global new_connection
         self.init_socket()
 
         # Основной цикл программы сервера
@@ -102,6 +104,8 @@ class Server(threading.Thread, metaclass=ServSupervisor):
                                 del self.names[name]
                                 break
                         self.clients.remove(client_with_message)
+                        with conflag_lock:
+                            new_connection = True
             # Если есть сообщения, обрабатываем каждое.
             for i in self.messages:
                 try:
@@ -117,6 +121,8 @@ class Server(threading.Thread, metaclass=ServSupervisor):
                     self.clients.remove(self.names[i[DESTINATION]])
                     self.db.user_logout(i[DESTINATION])
                     del self.names[i[DESTINATION]]
+                    with conflag_lock:
+                        new_connection = True
             self.messages.clear()
 
     def process_client_message(self, message, client):
@@ -149,24 +155,31 @@ class Server(threading.Thread, metaclass=ServSupervisor):
                 self.clients.remove(client)
                 client.close()
             return
-        elif ACTION in message and message[ACTION] == MESSAGE \
+        elif ACTION in message \
+                and message[ACTION] == MESSAGE \
                 and DESTINATION in message \
                 and TIME in message \
                 and SENDER in message \
                 and MESSAGE_TEXT in message\
                 and self.names[message[SENDER]] == client:
-            LOGGER.info(f'Клиент {message[SENDER]} прислал сообщение {message[MESSAGE_TEXT]} пользователю {message[DESTINATION]}') #Тайна переписки? Неа, не слышал)
-            self.messages.append(message)
-            self.db.process_message(
-                message[SENDER], message[DESTINATION])
+            if message[DESTINATION] in self.names:
+                self.messages.append(message)
+                self.db.process_message(message[SENDER], message[DESTINATION])
+                send_message(client, RESPONSE_200)
+                LOGGER.info(f'Клиент {message[SENDER]} прислал сообщение {message[MESSAGE_TEXT]} пользователю {message[DESTINATION]}') #Тайна переписки? Неа, не слышал)
+            else:
+                response = RESPONSE_400
+                response[ERROR] = 'Такой пользователь отсутствует.'
+                send_message(client, response)
             return
+
         elif ACTION in message \
                 and message[ACTION] == EXIT \
-                and ACCOUNT_NAME in message:
+                and ACCOUNT_NAME in message\
+                and self.names[message[ACCOUNT_NAME]] == client:
             self.db.user_logout(message[ACCOUNT_NAME])
             LOGGER.info(
-                f'Клиент {message[ACCOUNT_NAME]} в трезвом уме и здравой памяти'
-                f' отключился от сервера.')
+                f'Клиент {message[ACCOUNT_NAME]} покинул чат')
             self.clients.remove(self.names[message[ACCOUNT_NAME]])
             self.names[message[ACCOUNT_NAME]].close()
             del self.names[message[ACCOUNT_NAME]]
@@ -183,26 +196,30 @@ class Server(threading.Thread, metaclass=ServSupervisor):
             send_message(client, response)
 
         # Добавление контакта
-        elif ACTION in message and message[ACTION] == ADD_CONTACT and ACCOUNT_NAME in message and USER in message \
+        elif ACTION in message and message[ACTION] == ADD_CONTACT \
+                and ACCOUNT_NAME in message \
+                and USER in message \
                 and self.names[message[USER]] == client:
             self.db.add_contact(message[USER], message[ACCOUNT_NAME])
             send_message(client, RESPONSE_200)
 
         # Если это удаление контакта
-        elif ACTION in message and message[ACTION] == DEL_CONTACT and ACCOUNT_NAME in message and USER in message \
+        elif ACTION in message and message[ACTION] == DEL_CONTACT \
+                and ACCOUNT_NAME in message \
+                and USER in message \
                 and self.names[message[USER]] == client:
             self.db.remove_contact(message[USER], message[ACCOUNT_NAME])
             send_message(client, RESPONSE_200)
 
         # Если это запрос известных пользователей
-        elif ACTION in message and message[ACTION] == USER_REQUEST and ACCOUNT_NAME in message \
+        elif ACTION in message \
+                and message[ACTION] == USER_REQUEST \
+                and ACCOUNT_NAME in message \
                 and self.names[message[ACCOUNT_NAME]] == client:
             response = RESPONSE_202
-            response[LIST_INFO] = [user[0]
-                                   for user in self.db.users_list()]
+            response[LIST_INFO] = [user[0] for user in self.db.users_list()]
             send_message(client, response)
-        
-        
+
         else:
             LOGGER.error(f'Сообщение от клиента {message} не прошло валидацию')
             response = RESPONSE_400
@@ -260,21 +277,26 @@ def parse_argv(default_port, default_address):
         sys.exit(1)
     return listen_address, listen_port
 
-def print_help():
-    print('Поддерживаемые комманды:')
-    print('users - список известных пользователей')
-    print('connected - список подключённых пользователей')
-    print('loghist - история входов пользователя')
-    print('exit - завершение работы сервера.')
-    print('help - вывод справки по поддерживаемым командам')
+# Загрузка файла конфигурации
+def config_load():
+    config = configparser.ConfigParser()
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    config.read(f"{dir_path}/{'server.ini'}")
+    # Если конфиг файл загружен правильно, запускаемся, иначе конфиг по умолчанию.
+    if 'SETTINGS' in config:
+        return config
+    else:
+        config.add_section('SETTINGS')
+        config.set('SETTINGS', 'Default_port', str(DEFAULT_PORT))
+        config.set('SETTINGS', 'Listen_Address', '')
+        config.set('SETTINGS', 'Database_path', '')
+        config.set('SETTINGS', 'Database_file', 'server_base.db3')
+        return config
+
 
 def main():
     """Царь-функция"""
-    config = configparser.ConfigParser()
-
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    config.read(f"{dir_path}/{'server.ini'}")
-
+    config = config_load()
 
     listen_address, listen_port = parse_argv(config['SETTINGS']['Default_port'], config['SETTINGS']['Listen_Address'])
 

@@ -6,17 +6,25 @@ import logging
 # Прочие ключи, используемые в протоколе
 PRESENCE = 'presence'
 RESPONSE = 'response'
+ERROR = 'error'
+RESPONDEFAULT_IP_ADDRESSSE = 'respondefault_ip_addressse'
+MESSAGE_TEXT = 'mess_text'
+
+# Прококол JIM основные ключи:
+ACTION = 'action'
+TIME = 'time'
+USER = 'user'
+ACCOUNT_NAME = 'account_name'
+SENDER = 'from'
+DESTINATION = 'to'
 USER_REQUEST = 'get_users'
 LIST_INFO = 'data_list'
 GET_CONTACTS = 'get_contacts'
 ADD_CONTACT = 'add_contact'
 DEL_CONTACT = 'del_contact'
-ERROR = 'error'
-RESPONDEFAULT_IP_ADDRESSSE = 'respondefault_ip_addressse'
 MESSAGE = 'message'
-MESSAGE_TEXT = 'mess_text'
 EXIT = 'exit'
-
+REMOVE_CONTACT = 'remove'
 
 DEFAULT_PORT = 7777
 # IP адрес по умолчанию для подключения клиента
@@ -37,10 +45,7 @@ RESPONSE_400 = {RESPONSE: 400, ERROR: None}
 RESPONSE_202 = {RESPONSE: 202,
                 LIST_INFO: None}
 
-# Прококол JIM основные ключи:
-ACTION = 'action'
-TIME = 'time'
-USER = 'user'
-ACCOUNT_NAME = 'account_name'
-SENDER = 'from'
-DESTINATION = 'to'
+# База данных для хранения данных сервера:
+SERVER_CONFIG = 'server_dist+++.ini'
+
+
