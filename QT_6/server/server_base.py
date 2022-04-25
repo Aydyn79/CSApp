@@ -1,15 +1,17 @@
 import datetime
 import os
-
+import sys
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+sys.path.append('../../')
+
 
 # engine = create_engine('sqlite:///server_base.db3', echo=False)
 
 Base = declarative_base()
 
-path = os.path.join(os.path.dirname(os.path.realpath(__file__)), f'server_base.db3')
+path = os.path.join(os.path.dirname(os.path.realpath(__file__)), f'../server_base.db3')
 
 class Server_db:
     # Класс - описание таблиц сервера
@@ -104,6 +106,24 @@ class Server_db:
 
         self.sess.query(self.Active_Users).delete()
         self.sess.commit()
+
+    def get_hash(self, name):
+        """Метод получения хэша пароля пользователя."""
+        user = self.sess.query(self.All_Users).filter_by(name=name).first()
+        return user.passwd_hash
+
+    def get_pubkey(self, name):
+        """Метод получения публичного ключа пользователя."""
+        user = self.sess.query(self.All_Users).filter_by(name=name).first()
+        return user.pubkey
+
+    def check_user(self, name):
+        """Метод проверяющий существование пользователя."""
+        if self.sess.query(self.All_Users).filter_by(name=name).count():
+            return True
+        else:
+            return False
+
 
     # Функция выполняющаяся при входе пользователя, записывает в базу факт входа
     def user_login(self, username, ip_address, port):

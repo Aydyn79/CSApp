@@ -1,8 +1,5 @@
 """Программа-клиент"""
 import argparse
-import socket
-import threading
-import time
 
 from PyQt5.QtWidgets import QApplication
 from client.main_window import ClientMainWindow
@@ -10,9 +7,7 @@ from client.net_client import NetClient
 from client.start_dialog import UserNameDialog
 from client_base import ClientDatabase
 from common.errors import *
-from common.variables import *
 from common.utils import *
-from meta_detect import CliSupervisor
 from logs.config_client_log import LOGGER
 
 

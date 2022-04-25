@@ -27,6 +27,10 @@ EXIT = 'exit'
 REMOVE_CONTACT = 'remove'
 DATA = 'binary'
 PUBLIC_KEY = 'the_secret_of_the_Madrid_Court'
+USERS_REQUEST = 'get_users'
+PUBLIC_KEY_REQUEST = 'pubkey_need'
+
+
 
 DEFAULT_PORT = 7777
 # IP адрес по умолчанию для подключения клиента
