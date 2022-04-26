@@ -27,9 +27,9 @@ def bye(*args, **kwargs):
         print(f"Hello {key} bye {val}")
 
 
-a = ['andry', 'kevin', 'goblin']
-b = {'ODKB': 'NATO', 'Russia': 'Europa', 'China': 'West'}
-bye(*a,**b)
+# a = ['andry', 'kevin', 'goblin']
+# b = {'ODKB': 'NATO', 'Russia': 'Europa', 'China': 'West'}
+# bye(*a,**b)
 
 
 @log
@@ -37,7 +37,7 @@ def hello(name):
     print(f"Hello {name}")
 
 
-hello('name')
+# hello('name')
 
 class Log:
     def __init__(self, func):
@@ -54,8 +54,8 @@ class Log:
 @Log
 def hi(name):
     return print(f"Hello {name}")
-
-hi('my friends')
+#
+# hi('my friends')
 
 @Log
 def bye(*args, **kwargs):
@@ -107,6 +107,6 @@ def login_required(func):
 
 
 
-a = ['andry', 'kevin', 'goblin']
-b = {'ODKB': 'NATO', 'Russia': 'Europa', 'China': 'West'}
-bye(*a,**b)
+# a = ['andry', 'kevin', 'goblin']
+# b = {'ODKB': 'NATO', 'Russia': 'Europa', 'China': 'West'}
+# bye(*a,**b)

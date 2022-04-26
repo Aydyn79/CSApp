@@ -78,7 +78,7 @@ class RegisterUser(QDialog):
             salt = self.client_name.text().lower().encode('utf-8')
             passwd_hash = hashlib.pbkdf2_hmac(
                 'sha512', passwd_bytes, salt, 10000)
-            self.database.add_user(
+            self.database.add_contact(
                 self.client_name.text(),
                 binascii.hexlify(passwd_hash))
             self.messages.information(

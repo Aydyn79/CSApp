@@ -52,5 +52,5 @@ class MyClass:
 def Some_func():
     print('Hi')
 
-cl = MyClass()
-Some_func()
+# cl = MyClass()
+# Some_func()

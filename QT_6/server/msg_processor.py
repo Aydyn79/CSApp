@@ -26,7 +26,7 @@ from logs.config_server_log import LOGGER
 # conflag_lock = threading.Lock()
 
 
-class MessageProcessor(threading.Thread, metaclass=ServSupervisor):
+class MessageProcessor(threading.Thread):
     """
     Класс-обработчик входящих соединений и
     сообщений, запускается в отдельном потоке.

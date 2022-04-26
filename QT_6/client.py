@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import QApplication
 from client.main_window import ClientMainWindow
 from client.net_client import NetClient
 from client.start_dialog import UserNameDialog
-from client_base import ClientDatabase
+from client.client_base import ClientDatabase
 from common.errors import *
 from common.utils import *
 from logs.config_client_log import LOGGER

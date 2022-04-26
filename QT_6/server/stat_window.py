@@ -1,133 +1,57 @@
-
-from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QApplication, QLabel, QTableView
+from PyQt5.QtWidgets import QDialog, QPushButton, QTableView
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
-from PyQt5.QtCore import QTimer
-from server.stat_window import StatWindow
-from server.config_window import ConfigWindow
-from server.add_user import RegisterUser
-from server.remove_user import DelUserDialog
+from PyQt5.QtCore import Qt
 
 
-class MainWindow(QMainWindow):
-    '''Класс - основное окно сервера.'''
+class StatWindow(QDialog):
+    '''
+    Класс - окно со статистикой пользователей
+    '''
 
-    def __init__(self, database, server, config):
-        # Конструктор предка
+    def __init__(self, database):
         super().__init__()
 
-        # База данных сервера
         self.database = database
+        self.initUI()
 
-        self.server_thread = server
-        self.config = config
+    def initUI(self):
+        # Настройки окна:
+        self.setWindowTitle('Статистика клиентов')
+        self.setFixedSize(600, 700)
+        self.setAttribute(Qt.WA_DeleteOnClose)
 
-        # Ярлык выхода
-        self.exitAction = QAction('Выход', self)
-        self.exitAction.setShortcut('Ctrl+Q')
-        self.exitAction.triggered.connect(qApp.quit)
+        # Кнопка закрытия окна
+        self.close_button = QPushButton('Закрыть', self)
+        self.close_button.move(250, 650)
+        self.close_button.clicked.connect(self.close)
 
-        # Кнопка обновить список клиентов
-        self.refresh_button = QAction('Обновить список', self)
+        # Лист со статистикой
+        self.stat_table = QTableView(self)
+        self.stat_table.move(10, 10)
+        self.stat_table.setFixedSize(580, 620)
 
-        # Кнопка настроек сервера
-        self.config_btn = QAction('Настройки сервера', self)
+        self.create_stat_model()
 
-        # Кнопка регистрации пользователя
-        self.register_btn = QAction('Регистрация пользователя', self)
+    def create_stat_model(self):
+        '''Метод реализующий заполнение таблицы статистикой сообщений.'''
+        # Список записей из базы
+        stat_list = self.database.message_history()
 
-        # Кнопка удаления пользователя
-        self.remove_btn = QAction('Удаление пользователя', self)
-
-        # Кнопка вывести историю сообщений
-        self.show_history_button = QAction('История клиентов', self)
-
-        # Статусбар
-        self.statusBar()
-        self.statusBar().showMessage('Server Working')
-
-        # Тулбар
-        self.toolbar = self.addToolBar('MainBar')
-        self.toolbar.addAction(self.exitAction)
-        self.toolbar.addAction(self.refresh_button)
-        self.toolbar.addAction(self.show_history_button)
-        self.toolbar.addAction(self.config_btn)
-        self.toolbar.addAction(self.register_btn)
-        self.toolbar.addAction(self.remove_btn)
-
-        # Настройки геометрии основного окна
-        # Поскольку работать с динамическими размерами мы не умеем, и мало
-        # времени на изучение, размер окна фиксирован.
-        self.setFixedSize(800, 600)
-        self.setWindowTitle('Messaging Server alpha release')
-
-        # Надпись о том, что ниже список подключённых клиентов
-        self.label = QLabel('Список подключённых клиентов:', self)
-        self.label.setFixedSize(240, 15)
-        self.label.move(10, 25)
-
-        # Окно со списком подключённых клиентов.
-        self.active_clients_table = QTableView(self)
-        self.active_clients_table.move(10, 45)
-        self.active_clients_table.setFixedSize(780, 400)
-
-        # Таймер, обновляющий список клиентов 1 раз в секунду
-        self.timer = QTimer()
-        self.timer.timeout.connect(self.create_users_model)
-        self.timer.start(1000)
-
-        # Связываем кнопки с процедурами
-        self.refresh_button.triggered.connect(self.create_users_model)
-        self.show_history_button.triggered.connect(self.show_statistics)
-        self.config_btn.triggered.connect(self.server_config)
-        self.register_btn.triggered.connect(self.reg_user)
-        self.remove_btn.triggered.connect(self.rem_user)
-
-        # Последним параметром отображаем окно.
-        self.show()
-
-    def create_users_model(self):
-        '''Метод заполняющий таблицу активных пользователей.'''
-        list_users = self.database.active_users_list()
+        # Объект модели данных:
         list = QStandardItemModel()
         list.setHorizontalHeaderLabels(
-            ['Имя Клиента', 'IP Адрес', 'Порт', 'Время подключения'])
-        for row in list_users:
-            user, ip, port, time = row
+            ['Имя Клиента', 'Последний раз входил', 'Сообщений отправлено', 'Сообщений получено'])
+        for row in stat_list:
+            user, last_seen, sent, recvd = row
             user = QStandardItem(user)
             user.setEditable(False)
-            ip = QStandardItem(ip)
-            ip.setEditable(False)
-            port = QStandardItem(str(port))
-            port.setEditable(False)
-            # Уберём милисекунды из строки времени, т.к. такая точность не
-            # требуется.
-            time = QStandardItem(str(time.replace(microsecond=0)))
-            time.setEditable(False)
-            list.appendRow([user, ip, port, time])
-        self.active_clients_table.setModel(list)
-        self.active_clients_table.resizeColumnsToContents()
-        self.active_clients_table.resizeRowsToContents()
-
-    def show_statistics(self):
-        '''Метод создающий окно со статистикой клиентов.'''
-        global stat_window
-        stat_window = StatWindow(self.database)
-        stat_window.show()
-
-    def server_config(self):
-        '''Метод создающий окно с настройками сервера.'''
-        global config_window
-        # Создаём окно и заносим в него текущие параметры
-        config_window = ConfigWindow(self.config)
-
-    def reg_user(self):
-        '''Метод создающий окно регистрации пользователя.'''
-        global reg_window
-        reg_window = RegisterUser(self.database, self.server_thread)
-        reg_window.show()
-
-    def rem_user(self):
-        '''Метод создающий окно удаления пользователя.'''
-        global rem_window
-        rem_window = DelUserDialog(self.database, self.server_thread)
-        rem_window.show()
+            last_seen = QStandardItem(str(last_seen.replace(microsecond=0)))
+            last_seen.setEditable(False)
+            sent = QStandardItem(str(sent))
+            sent.setEditable(False)
+            recvd = QStandardItem(str(recvd))
+            recvd.setEditable(False)
+            list.appendRow([user, last_seen, sent, recvd])
+        self.stat_table.setModel(list)
+        self.stat_table.resizeColumnsToContents()
+        self.stat_table.resizeRowsToContents()
