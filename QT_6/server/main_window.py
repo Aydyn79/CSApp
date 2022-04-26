@@ -1,7 +1,9 @@
+import sys
 
 from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QApplication, QLabel, QTableView
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from PyQt5.QtCore import QTimer
+sys.path.append('../')
 from server.stat_window import StatWindow
 from server.config_window import ConfigWindow
 from server.add_user import RegisterUser

@@ -3,16 +3,15 @@ import argparse
 import configparser
 import os
 import sys
-
-from QT_6.server.msg_processor import MessageProcessor
-
-from common.variables import DEFAULT_PORT
-from logs.config_server_log import LOGGER
-from QT_6.server.server_base import Server_db
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import Qt
+sys.path.append('../')
+from common.variables import DEFAULT_PORT
+from logs.config_server_log import LOGGER
+from server.server_base import Server_db
+from server.msg_processor import MessageProcessor
+from server.main_window import MainWindow
 
-from server_gui import MainWindow
 
 
 # Флаг, что был подключён новый пользователь, нужен чтобы не мучать BD

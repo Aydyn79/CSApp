@@ -11,9 +11,10 @@ from common.variables import RESPONSE_511, DATA, PUBLIC_KEY, RESPONSE_205, REMOV
     ACTION, ACCOUNT_NAME, RESPONSE, MAX_CONNECTIONS, PRESENCE, TIME, USER, ERROR, RESPONDEFAULT_IP_ADDRESSSE, RESPONSE_400,\
     RESPONSE_200, DESTINATION, MESSAGE, MESSAGE_TEXT, SENDER, EXIT, GET_CONTACTS, LIST_INFO, ADD_CONTACT, DEL_CONTACT, \
     USER_REQUEST, RESPONSE_202, DEFAULT_PORT
-from meta_detect import ServSupervisor
-from descript import Port, Address
+from common.meta_detect import ServSupervisor
+from common.descript import Port, Address
 from common.utils import get_message, send_message
+from common.decor_1 import login_required
 from logs.config_server_log import LOGGER
 
 
