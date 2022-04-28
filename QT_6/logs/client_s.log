@@ -953,3 +953,36 @@ Gooogogogo
 22-04-2022 23:26:48 DEBUG    net_client.py Принято сообщение с сервера: {'action': 'message', 'from': 'Fargo', 'to': 'fort', 'time': 1650644807.7107847, 'mess_text': 'gfhhfgh'}
 22-04-2022 23:26:48 DEBUG    net_client.py Получено сообщение от пользователя Fargo:gfhhfgh
 22-04-2022 23:26:48 DEBUG    net_client.py Принято сообщение с сервера: {'response': 200}
+27-04-2022 00:30:07 INFO     client.py   Запущен клиент fordo с параметрами: адрес сервера: 127.0.0.1, порт: 7777
+27-04-2022 01:12:20 INFO     client.py   Using USERNAME = fort, PASSWD = .
+27-04-2022 01:12:20 INFO     client.py   Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: fort
+27-04-2022 01:12:20 DEBUG    client.py   Keys successfully loaded.
+27-04-2022 01:12:20 INFO     net_client.py Запущен клиент fort с параметрами: адрес сервера: 127.0.0.1, порт: 7777
+27-04-2022 01:12:20 INFO     net_client.py Моя попытка №0
+27-04-2022 01:12:20 DEBUG    net_client.py Установлено соединение с сервером
+27-04-2022 01:12:21 DEBUG    net_client.py Хэш-пароль сформирован: b'cc24ace24bbbc1bda8edf7a684e515d79da70be03683f0ddb98941af2afa0b94418897566cfc8b6ac11150528352b6609b33c589ccae4edf6eaa78e3868f4185'
+27-04-2022 01:12:21 DEBUG    net_client.py Сформировано presence сообщение для пользователя fort
+27-04-2022 01:12:21 DEBUG    net_client.py Connection error.
+Traceback (most recent call last):
+  File "/home/nexter/PycharmProjects/CSApp/QT_6/client/net_client.py", line 104, in data_exchange_init
+    answer = get_message(self.transport)
+  File "/home/nexter/PycharmProjects/CSApp/QT_6/common/utils.py", line 23, in get_message
+    response = json.loads(json_response)
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+27-04-2022 01:12:21 ERROR    client.py   При установке соединения сервер вернул ошибку: Сбой соединения в процессе авторизации.
+27-04-2022 01:22:56 INFO     client.py   Using USERNAME = rtyu, PASSWD = q.
+27-04-2022 01:22:56 INFO     client.py   Запущен клиент с параметрами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: rtyu
+27-04-2022 01:22:57 DEBUG    client.py   Keys successfully loaded.
+27-04-2022 01:22:57 INFO     net_client.py Запущен клиент rtyu с параметрами: адрес сервера: 127.0.0.1, порт: 7777
+27-04-2022 01:22:57 INFO     net_client.py Моя попытка №0
+27-04-2022 01:22:57 DEBUG    net_client.py Установлено соединение с сервером
+27-04-2022 01:22:57 DEBUG    net_client.py Хэш-пароль сформирован: b'1e834321e5406522fe08afdf7dfc01fc1280d67d6f037ce02c56266ecac2e3f3d8171cce18ae36b8e107e4183d772cc3bec622121e966058fec6c8fd866ccfe1'
+27-04-2022 01:22:57 DEBUG    net_client.py Сформировано presence сообщение для пользователя rtyu
+27-04-2022 01:22:57 INFO     net_client.py Установлено соединение с сервером. Ответ сервера: {'response': 400, 'error': 'Пользователь не зарегистрирован.'}
+27-04-2022 01:22:57 ERROR    client.py   При установке соединения сервер вернул ошибку: Пользователь не зарегистрирован.

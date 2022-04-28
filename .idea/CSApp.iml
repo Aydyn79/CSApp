@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/lesson_5/common" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lesson_5/logs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/QT_4/common" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.9" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PyDocumentationSettings">
+    <option name="format" value="PLAIN" />
+    <option name="myDocStringFormat" value="Plain" />
+  </component>
+  <component name="PyNamespacePackagesService">
+    <option name="namespacePackageFolders">
+      <list>
+        <option value="$MODULE_DIR$/lesson_5/logs" />
+        <option value="$MODULE_DIR$/lesson_8/common" />
+        <option value="$MODULE_DIR$/QT_2/logs" />
+        <option value="$MODULE_DIR$/QT_2/common" />
+        <option value="$MODULE_DIR$/QT_2/decorator" />
+        <option value="$MODULE_DIR$/QT_5/common" />
+        <option value="$MODULE_DIR$/QT_6/common" />
+      </list>
+    </option>
+  </component>
+</module>

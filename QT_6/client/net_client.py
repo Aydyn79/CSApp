@@ -16,7 +16,7 @@ from QT_6.common.variables import DATA, RESPONSE_511
 sys.path.append('../')
 from common.variables import PUBLIC_KEY
 from common.errors import ReqFieldMissingError
-from client_base import ClientDatabase
+from client.client_base import ClientDatabase
 from logs.config_client_log import LOGGER
 from common.utils import valid_ip, send_message, get_message
 from common.variables import ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, RESPONSE, ERROR, EXIT, MESSAGE, SENDER, \

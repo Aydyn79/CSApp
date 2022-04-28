@@ -89,7 +89,7 @@ class MessageProcessor(threading.Thread):
                 pass
             else:
                 LOGGER.info(f'Установлено соединение с клиентом: {client_address}')
-                # client.settimeout(5)
+                client.settimeout(5)
                 self.clients.append(client)
 
             recv_data_lst = []
@@ -113,8 +113,6 @@ class MessageProcessor(threading.Thread):
                     except Exception:
                         LOGGER.info(f'Клиент {client_with_message.getpeername()} отключился от сервера.')
                         self.client_remove(client_with_message)
-                        with conflag_lock:
-                            new_connection = True
 
     def client_remove(self, client):
         '''
