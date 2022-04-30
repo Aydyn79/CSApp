@@ -41,7 +41,7 @@ while True:
         break
     elif USER == "s":
 
-        # P_LIST.append(get_subprocess("server.py"))
+        # P_LIST.append(get_subprocess("server_app.py"))
         time.sleep(0.5)
         for i in range(CLIENTS_COUNT):
             P_LIST.append(get_subprocess("client.py"))

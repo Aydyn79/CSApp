@@ -8,7 +8,7 @@ from common.variables import ACTION, ACCOUNT_NAME, RESPONSE, MAX_CONNECTIONS, \
 from client import *
 
 class ParseArgvClient:
-    '''Модель части кода файла client.py, отвечающего за парсинг параметров
+    '''Модель части кода файла client_app.py, отвечающего за парсинг параметров
     командной строки и возвращающего значения порта и IP адреса'''
     def __init__(self, n_addr, value_addr, n_port, value_port):
         self.n_addr = n_addr

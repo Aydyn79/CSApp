@@ -24,6 +24,8 @@
         <option value="$MODULE_DIR$/QT_2/decorator" />
         <option value="$MODULE_DIR$/QT_5/common" />
         <option value="$MODULE_DIR$/QT_6/common" />
+        <option value="$MODULE_DIR$/QT61/decorator" />
+        <option value="$MODULE_DIR$/QT61/logs" />
       </list>
     </option>
   </component>
